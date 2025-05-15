@@ -9,7 +9,7 @@ class Solution:
         Do not return anything, modify nums1 in-place instead.
         """
         for i in range(m, m+n):
-             nums1[i] = nums2[i-n]
+             nums1[i] = nums2[i-m]
         nums1.sort()
 
 class Solution_Tests(unittest.TestCase):
@@ -27,6 +27,10 @@ class Solution_Tests(unittest.TestCase):
         nums1 = [0]
         self.solution.merge(nums1, m = 0, nums2 = [1], n = 1)
         self.assertEqual(nums1, [1])
+    def test4(self):
+        nums1 = [1,2,4,5,6,0]
+        self.solution.merge(nums1, m = 5, nums2 = [3], n = 1)
+        self.assertEqual(nums1, [1,2,3,4,5,6])
 
 if __name__ == "__main__":
     unittest.main()
