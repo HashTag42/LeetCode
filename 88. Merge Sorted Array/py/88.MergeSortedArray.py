@@ -12,7 +12,7 @@ class Solution:
              nums1[i] = nums2[i-m]
         nums1.sort()
 
-class Solution_Tests(unittest.TestCase):
+class merge_Tests(unittest.TestCase):
     def setUp(self):
         self.solution = Solution()
     def test1(self):
