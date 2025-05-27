@@ -15,6 +15,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "121. Best Time to Buy and S
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "121. Best Time to Buy and Sell Stock (Python)", "121. Best Time to Buy and Sell Stock\py\121. Best Time to Buy and Sell Stock (Python).pyproj", "{131CA4F7-3ECE-430E-BB78-1385BFBBB835}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "20", "20", "{C4B22CAA-3C34-41A5-92D5-7FE46406ADEC}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "20. Valid Parentheses (Python)", "20. Valid Parentheses\20. Valid Parentheses (Python)\20. Valid Parentheses (Python).pyproj", "{6BCCD7A9-C420-429F-8BFA-432058B45458}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,8 @@ Global
 		{741E5550-9FDD-4C93-B44E-1B1AFD5664E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{131CA4F7-3ECE-430E-BB78-1385BFBBB835}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{131CA4F7-3ECE-430E-BB78-1385BFBBB835}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BCCD7A9-C420-429F-8BFA-432058B45458}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BCCD7A9-C420-429F-8BFA-432058B45458}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -35,6 +41,7 @@ Global
 		{83850E52-3E27-4504-93C7-76F53A419295} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{741E5550-9FDD-4C93-B44E-1B1AFD5664E0} = {05602B7B-46E5-4338-90FB-3248FD9C39DD}
 		{131CA4F7-3ECE-430E-BB78-1385BFBBB835} = {944C5402-D20B-4754-BC57-BBBB67059C14}
+		{6BCCD7A9-C420-429F-8BFA-432058B45458} = {C4B22CAA-3C34-41A5-92D5-7FE46406ADEC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F54B2A8A-1227-4026-96DF-8E4FDEC508B3}
