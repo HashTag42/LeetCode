@@ -39,6 +39,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1672. Richest Customer Weal
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "1672. Richest Customer Wealth (Python)", "1672. Richest Customer Wealth\py\1672. Richest Customer Wealth (Python).pyproj", "{49E585AD-9A5A-4D02-889E-6CE65CD6010D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "412. Fizz Buzz", "412. Fizz Buzz", "{BCCB724B-BACE-45CB-922C-9F57D4D634B0}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "412. Fizz Buzz (Python)", "412. Fizz Buzz\py\412. Fizz Buzz (Python).pyproj", "{119B5EE2-F772-4EFA-B41A-295B07D7ADF7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +67,8 @@ Global
 		{5AA2B339-D847-4312-81A3-EAA9EE1BEB36}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{49E585AD-9A5A-4D02-889E-6CE65CD6010D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{49E585AD-9A5A-4D02-889E-6CE65CD6010D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{119B5EE2-F772-4EFA-B41A-295B07D7ADF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{119B5EE2-F772-4EFA-B41A-295B07D7ADF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -77,6 +83,7 @@ Global
 		{9B3CCFD1-E9B1-4DAA-897C-78F39065861E} = {73A77542-62BD-4E86-9AB0-BB16FF81FE82}
 		{5AA2B339-D847-4312-81A3-EAA9EE1BEB36} = {835A03FE-0E64-4EA9-BD6C-6434A7A940DB}
 		{49E585AD-9A5A-4D02-889E-6CE65CD6010D} = {CE79C0F0-0087-4693-8A70-E3E3547E8E78}
+		{119B5EE2-F772-4EFA-B41A-295B07D7ADF7} = {BCCB724B-BACE-45CB-922C-9F57D4D634B0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F54B2A8A-1227-4026-96DF-8E4FDEC508B3}
