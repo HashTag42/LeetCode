@@ -3,6 +3,8 @@
 import unittest
 
 class Solution:
+    # Time Complexity = O(logn)
+    # Space Complexity = O(1)
     def numberOfSteps(self, num: int) -> int:
         steps = 0
         while (num > 0):
