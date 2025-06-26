@@ -8,8 +8,7 @@ class Solution:
     def numberOfSteps(self, num: int) -> int:
         steps = 0
         while (num > 0):
-            isNumEven = True if num % 2 == 0 else False
-            if isNumEven:
+            if num % 2 == 0:
                 num /= 2
             else:
                 num -= 1
