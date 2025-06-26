@@ -27,6 +27,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2236. Root Equals Sum of Ch
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "2236. Root Equals Sum of Children (Python)", "2236. Root Equals Sum of Children\py\2236. Root Equals Sum of Children (Python).pyproj", "{A6A5F543-3179-4458-A825-FD86FFB453D9}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2235. Add Two Integers", "2235. Add Two Integers", "{73A77542-62BD-4E86-9AB0-BB16FF81FE82}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "2235. Add Two Integers (Python)", "2235. Add Two Integers\py\2235. Add Two Integers (Python).pyproj", "{9B3CCFD1-E9B1-4DAA-897C-78F39065861E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,8 @@ Global
 		{EA6B14B4-B123-407B-84D0-F2A585F56E8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A6A5F543-3179-4458-A825-FD86FFB453D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A6A5F543-3179-4458-A825-FD86FFB453D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B3CCFD1-E9B1-4DAA-897C-78F39065861E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B3CCFD1-E9B1-4DAA-897C-78F39065861E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -56,6 +62,7 @@ Global
 		{6BCCD7A9-C420-429F-8BFA-432058B45458} = {C4B22CAA-3C34-41A5-92D5-7FE46406ADEC}
 		{EA6B14B4-B123-407B-84D0-F2A585F56E8B} = {7F18D4B5-0004-4DA9-9C75-08B115242A7D}
 		{A6A5F543-3179-4458-A825-FD86FFB453D9} = {51BBE0AF-7D0B-4181-B353-1E16F4B79DFE}
+		{9B3CCFD1-E9B1-4DAA-897C-78F39065861E} = {73A77542-62BD-4E86-9AB0-BB16FF81FE82}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F54B2A8A-1227-4026-96DF-8E4FDEC508B3}
