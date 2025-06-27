@@ -5,14 +5,14 @@
     <ProjectGuid>7019b572-d08e-4d01-b1f5-930b19a2f046</ProjectGuid>
     <ProjectHome>
     </ProjectHome>
-    <StartupFile>unittest_PalindromeNumber.py</StartupFile>
+    <StartupFile>test_PalindromeNumber.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <Name>9. Palindrome Number (Python)</Name>
     <RootNamespace>py</RootNamespace>
-    <TestFramework>unittest</TestFramework>
+    <TestFramework>pytest</TestFramework>
     <UnitTestPattern>unittest*.py</UnitTestPattern>
     <UnitTestRootDirectory>.</UnitTestRootDirectory>
   </PropertyGroup>
