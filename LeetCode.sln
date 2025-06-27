@@ -51,6 +51,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "876. Middle of the Linked L
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "876. Middle of the Linked List (Python)", "876. Middle of the Linked List\py\876. Middle of the Linked List (Python).pyproj", "{B8E1616A-6541-4CA2-9C63-2D3D55B8B395}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "383. Ransom Note", "383. Ransom Note", "{3ED7CBFD-49FF-40C3-9441-49E1BD798AFA}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "383. Ransom Note (Python)", "383. Ransom Note\py\383. Ransom Note (Python).pyproj", "{741BFF39-78AD-4437-8026-56BCFF994AEB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +85,8 @@ Global
 		{F91240DF-1A31-4149-9799-8E20030EE802}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B8E1616A-6541-4CA2-9C63-2D3D55B8B395}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B8E1616A-6541-4CA2-9C63-2D3D55B8B395}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{741BFF39-78AD-4437-8026-56BCFF994AEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{741BFF39-78AD-4437-8026-56BCFF994AEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -98,6 +104,7 @@ Global
 		{119B5EE2-F772-4EFA-B41A-295B07D7ADF7} = {BCCB724B-BACE-45CB-922C-9F57D4D634B0}
 		{F91240DF-1A31-4149-9799-8E20030EE802} = {268871DB-AAAD-4F02-BDE4-057FC2AD4474}
 		{B8E1616A-6541-4CA2-9C63-2D3D55B8B395} = {F81001BF-E1C0-4F30-9E55-CA267CB3A1FC}
+		{741BFF39-78AD-4437-8026-56BCFF994AEB} = {3ED7CBFD-49FF-40C3-9441-49E1BD798AFA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F54B2A8A-1227-4026-96DF-8E4FDEC508B3}
