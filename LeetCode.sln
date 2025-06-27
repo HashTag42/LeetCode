@@ -57,7 +57,7 @@ Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "383. Ransom Note (Python)",
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "9. Palindrome Number", "9. Palindrome Number", "{A3AE16E7-68B8-4608-B301-49CAF579FF61}"
 EndProject
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "9. Palindrome Number (Python)", "9. Palindrome Number\py\9. Palindrome Number (Python).pyproj", "{7019B572-D08E-4D01-B1F5-930B19A2F046}"
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "9. Palindrome Number (Python)", "9.PalindromeNumber\py\9. Palindrome Number (Python).pyproj", "{7019B572-D08E-4D01-B1F5-930B19A2F046}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
