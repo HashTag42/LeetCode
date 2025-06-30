@@ -2,19 +2,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>7019b572-d08e-4d01-b1f5-930b19a2f046</ProjectGuid>
+    <ProjectGuid>ea6b14b4-b123-407b-84d0-f2a585f56e8b</ProjectGuid>
     <ProjectHome>
     </ProjectHome>
-    <StartupFile>unittest_PalindromeNumber.py</StartupFile>
+    <StartupFile>733.FloodFill.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
-    <Name>9. Palindrome Number (Python)</Name>
+    <Name>733. Flood Fill (Python)</Name>
     <RootNamespace>py</RootNamespace>
-    <TestFramework>pytest</TestFramework>
-    <UnitTestPattern>unittest*.py</UnitTestPattern>
-    <UnitTestRootDirectory>.</UnitTestRootDirectory>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -25,11 +22,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="PalindromeNumber.py" />
-    <Compile Include="test_PalindromeNumber.py" />
-    <Compile Include="unittest_PalindromeNumber.py">
-      <SubType>Code</SubType>
-    </Compile>
+    <Compile Include="733.FloodFill.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
