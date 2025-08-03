@@ -59,6 +59,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "9. Palindrome Number", "9. 
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "9. Palindrome Number (Python)", "9.PalindromeNumber\py\9. Palindrome Number (Python).pyproj", "{7019B572-D08E-4D01-B1F5-930B19A2F046}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "118. Pascal Triangle", "118. Pascal Triangle", "{696BC0EF-F6E6-4198-92A9-BDF3CCE0650B}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "118. Pascal Triangle (Python)", "118. Pascal Triangle\py\118. Pascal Triangle (Python).pyproj", "{09891C28-D01A-4509-8652-46AC5C93157A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}"
+	ProjectSection(SolutionItems) = preProject
+		.flake8 = .flake8
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +102,8 @@ Global
 		{741BFF39-78AD-4437-8026-56BCFF994AEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7019B572-D08E-4D01-B1F5-930B19A2F046}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7019B572-D08E-4D01-B1F5-930B19A2F046}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09891C28-D01A-4509-8652-46AC5C93157A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09891C28-D01A-4509-8652-46AC5C93157A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -112,6 +123,7 @@ Global
 		{B8E1616A-6541-4CA2-9C63-2D3D55B8B395} = {F81001BF-E1C0-4F30-9E55-CA267CB3A1FC}
 		{741BFF39-78AD-4437-8026-56BCFF994AEB} = {3ED7CBFD-49FF-40C3-9441-49E1BD798AFA}
 		{7019B572-D08E-4D01-B1F5-930B19A2F046} = {A3AE16E7-68B8-4608-B301-49CAF579FF61}
+		{09891C28-D01A-4509-8652-46AC5C93157A} = {696BC0EF-F6E6-4198-92A9-BDF3CCE0650B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F54B2A8A-1227-4026-96DF-8E4FDEC508B3}
