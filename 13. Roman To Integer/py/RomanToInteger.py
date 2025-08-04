@@ -14,9 +14,9 @@ class Solution:
             c = s[i]
             n = s[i+1] if (i < len(s) - 1) else ""
             if (
-                ((c == "I") and (n == "V" or n == "X"))
-                or ((c == "X") and (n == "L" or n == "C"))
-                or ((c == "C") and (n == "D" or n == "M"))
+                ((c == "I") and (n == "V" or n == "X")) or
+                ((c == "X") and (n == "L" or n == "C")) or
+                ((c == "C") and (n == "D" or n == "M"))
             ):
                 c += n
                 i += 1
