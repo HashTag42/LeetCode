@@ -2,6 +2,7 @@
 
 import unittest
 
+
 ################################################################################
 class Solution:
     def isValid(self, s: str) -> bool:
@@ -23,31 +24,43 @@ class Solution:
             return False
 ################################################################################
 
+
 ################################################################################
 class isValid_Tests(unittest.TestCase):
     def setUp(self):
         self.solution = Solution()
+
     def test01(self):
         self.assertEqual(self.solution.isValid("()"), True)
+
     def test02(self):
         self.assertEqual(self.solution.isValid("()[]{}"), True)
+
     def test03(self):
         self.assertEqual(self.solution.isValid("(]"), False)
+
     def test04(self):
         self.assertEqual(self.solution.isValid("([])"), True)
+
     def test05(self):
         self.assertEqual(self.solution.isValid("([])([])"), True)
+
     def test06(self):
         self.assertEqual(self.solution.isValid(""), False)
+
     def test07(self):
         self.assertEqual(self.solution.isValid("]"), False)
+
     def test08(self):
         self.assertEqual(self.solution.isValid(")(){}"), False)
+
     def test09(self):
         self.assertEqual(self.solution.isValid("(])"), False)
+
     def test10(self):
         self.assertEqual(self.solution.isValid("([{}])"), True)
 ################################################################################
+
 
 ################################################################################
 if __name__ == "__main__":
