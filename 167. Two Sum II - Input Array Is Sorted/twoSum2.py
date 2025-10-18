@@ -8,6 +8,10 @@ from typing import List
 
 class Solution:
     def twoSum2(self, numbers: List[int], target: int) -> List[int]:
+        """
+        Time complexity: O(n)
+        Space complexity: O(n)
+        """
         found_values = dict()
         for i in range(len(numbers)):
             if numbers[i] not in found_values:

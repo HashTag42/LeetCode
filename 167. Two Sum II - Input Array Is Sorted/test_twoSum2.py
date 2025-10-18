@@ -1,4 +1,4 @@
-from two_sum2 import Solution
+from twoSum2 import Solution
 import pytest
 
 
