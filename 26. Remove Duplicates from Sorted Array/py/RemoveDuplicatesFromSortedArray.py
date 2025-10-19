@@ -1,7 +1,6 @@
 # LeetCode challenge: 26. Remove Duplicates from Sorted Array
 # https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/
 
-import unittest
 from typing import List
 
 
@@ -17,18 +16,3 @@ class Solution:
                 # Incrementing insertIndex count by 1
                 insertIndex = insertIndex + 1
         return insertIndex
-
-
-class Solution_Tests(unittest.TestCase):
-    def setUp(self):
-        self.solution = Solution()
-
-    def test_case_1(self):
-        self.assertEqual(self.solution.removeDuplicates([1, 1, 2]), 2)
-
-    def test_case_2(self):
-        self.assertEqual(self.solution.removeDuplicates([0, 0, 1, 1, 1, 2, 2, 3, 3, 4]), 5)
-
-
-if __name__ == "__main__":
-    unittest.main()

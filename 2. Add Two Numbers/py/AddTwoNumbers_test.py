@@ -1,34 +1,5 @@
-# LeetCode challenge: 2. Add Two Numbers
-# <https://leetcode.com/problems/add-two-numbers/description/>
-
-from typing import List, Optional
 import unittest
-
-
-# Definition for singly-linked list.
-class ListNode:
-    def __init__(self, val=0, next=None):
-        self.val = val
-        self.next = next
-
-
-class Solution:
-    def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
-        return self.int_to_list(self.list_to_int(l1) + self.list_to_int(l2))
-
-    def list_to_int(self, l1: Optional[ListNode]) -> List:
-        number = 0
-        for n in range(len(l1)):
-            number += l1[n] * (10 ** n)
-        return number
-
-    def int_to_list(self, num: int) -> List:
-        s_num = str(num)
-        len_s = len(s_num)
-        li = []
-        for i in range(len_s):
-            li.append(int(s_num[len_s - i - 1]))
-        return li
+from AddTwoNumbers import Solution
 
 
 class addTwoNumbers_tests(unittest.TestCase):
@@ -74,7 +45,3 @@ class int_to_list_tests(unittest.TestCase):
 
     def test_int_to_list_2(self):
         self.assertEqual(self.sol.int_to_list(321), [1, 2, 3])
-
-
-if __name__ == "__main__":
-    unittest.main()

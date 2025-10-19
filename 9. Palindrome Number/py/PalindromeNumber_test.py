@@ -15,7 +15,3 @@ class Test_unittest_PalindromeNumber(unittest.TestCase):
 
     def test_3(self):
         self.assertEqual(self.solution.isPalindrome(10), False)
-
-
-if __name__ == '__main__':
-    unittest.main()
