@@ -10,10 +10,8 @@ class Solution:
             return None
         c1, c2 = edges[0][0], edges[0][1]
         c1center = True
-        # c2center = True
         for node in edges:
             c1center = True if node[0] == c1 or node[1] == c1 else False
-            # c2center = True if node[0] == c2 or node[1] == c2 else False
         if c1center:
             return c1
         else:
