@@ -17,3 +17,6 @@ class Solution_findCenter_Tests(unittest.TestCase):
 
     def test_findCenter_Case_4(self):
         self.assertEqual(self.solution.findCenter(None), None)
+
+    def test_findCenter_Case_5(self):
+        self.assertEqual(self.solution.findCenter([[1, 2], [1, 3], [1, 4], [5, 1]]), 1)
