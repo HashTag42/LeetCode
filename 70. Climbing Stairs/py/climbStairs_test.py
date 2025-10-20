@@ -17,3 +17,7 @@ class Solution_climbStairs_Tests(unittest.TestCase):
 
     def test_case_5(self):
         self.assertEqual(self.solution.climbStairs(5), 8)
+
+    def test_case_negative(self):
+        with self.assertRaises(ValueError):
+            self.solution.climbStairs(-1)

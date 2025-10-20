@@ -1,9 +1,6 @@
 # LeetCode problem 408: Valid Word Abbreviation
 # https://leetcode.com/problems/valid-word-abbreviation/description/
 
-import unittest
-
-
 class Solution:
     def validWordAbbreviation(seld, word: str, abbr: str) -> bool:
         """
@@ -45,34 +42,3 @@ class Solution:
             abbr_cnt += int(num_str)
 
         return word_len == abbr_cnt
-
-
-class Solution_validWordAbbreviation_Tests(unittest.TestCase):
-    def setUp(self):
-        self.solution = Solution()
-        return super().setUp()
-
-    def test_validWordAbbreviation_Case_1(self):
-        self.assertEqual(self.solution.validWordAbbreviation("internationalization", "i12iz4n"), True)
-
-    def test_validWordAbbreviation_Case_2(self):
-        self.assertEqual(self.solution.validWordAbbreviation("apple", "a2e"), False)
-
-    def test_validWordAbbreviation_Case_3(self):
-        self.assertEqual(self.solution.validWordAbbreviation("internationalization", "i5a11o1"), True)
-
-    def test_validWordAbbreviation_Case_4(self):
-        self.assertEqual(self.solution.validWordAbbreviation("hi", "hi1"), False)
-
-    def test_validWordAbbreviation_Case_5(self):
-        self.assertEqual(self.solution.validWordAbbreviation("word", "3e"), False)
-
-    def test_validWordAbbreviation_Case_6(self):
-        self.assertEqual(self.solution.validWordAbbreviation("hi", "2i"), False)
-
-    def tearDown(self):
-        return super().tearDown()
-
-
-if __name__ == "__main__":
-    unittest.main()

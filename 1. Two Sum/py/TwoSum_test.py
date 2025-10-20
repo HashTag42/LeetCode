@@ -14,3 +14,9 @@ class twoSum_Tests(unittest.TestCase):
 
     def test3(self):
         self.assertEqual(self.solution.twoSum([3, 3], 6), [0, 1])
+
+    def test4(self):
+        self.assertEqual(self.solution.twoSum([], 0), None)
+
+    def test5(self):
+        self.assertEqual(self.solution.twoSum(None, 6), None)

@@ -1,24 +1,5 @@
-# LeetCode problem 509. Fibonacci Number
-# <https://leetcode.com/problems/fibonacci-number/>
-
 import unittest
-
-
-class Solution:
-    def fib(self, n: int) -> int:
-        if n < 0:
-            raise ValueError("Number must be a positive integer")
-        elif n == 0:
-            return 0
-        elif n <= 2:
-            return 1
-        else:
-            a, b = 0, 1
-            for _ in range(2, n + 1):
-                c = a + b
-                a = b
-                b = c
-            return c
+from FibonacciNumber import Solution
 
 
 class Solution_fib_Tests(unittest.TestCase):
@@ -46,6 +27,6 @@ class Solution_fib_Tests(unittest.TestCase):
     def test_fib_10(self):
         self.assertEqual(self.solution.fib(10), 55)
 
-
-if __name__ == "__main__":
-    unittest.main()
+    def test_fib_negative(self):
+        with self.assertRaises(ValueError):
+            self.solution.fib(-1)

@@ -12,7 +12,10 @@ class Solution:
             Time complexity = O(n^2)
             Storage complexity = O(1)
         """
-        n = len(nums) + 1
+        if nums == [] or nums is None:
+            n = 0
+        else:
+            n = len(nums) + 1
         for i in range(0, n):
             if i not in nums:
                 return i
@@ -22,7 +25,10 @@ class Solution:
             Time complexity = O(n) to obtain sum_of_elements
             Storage complexity = O(1)
         """
-        n = len(nums)
+        if nums == [] or nums is None:
+            return None
+        else:
+            n = len(nums)
         sum_of_elements = sum(nums)
         actual_sum = (n * (n + 1)) / 2
         return int(actual_sum - sum_of_elements)

@@ -12,8 +12,12 @@ class Solution:
         Time complexity: O(n)
         Space complexity: O(n)
         """
+        if numbers == [] or numbers is None:
+            length = 0
+        else:
+            length = len(numbers)
         found_values = dict()
-        for i in range(len(numbers)):
+        for i in range(length):
             if numbers[i] not in found_values:
                 found_values[numbers[i]] = i
             wanted = target - numbers[i]
