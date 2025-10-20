@@ -19,6 +19,10 @@ class ListNode:
 ################################################################################
 class Solution:
     def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
+        if list1 == [] or list1 is None:
+            return list2
+        if list2 == [] or list2 is None:
+            return list1
         list2.extend(list1)
         list2.sort()
         return list2
