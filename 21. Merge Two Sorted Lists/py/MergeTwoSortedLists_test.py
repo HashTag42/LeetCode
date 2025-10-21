@@ -25,7 +25,7 @@ class mergeTwoLists_Tests(unittest.TestCase):
         self.assertEqual(self.solution.mergeTwoLists(None, [1]), [1])
 
     def test_mergeTwoLists_example_7(self):
-        self.assertEqual(self.solution.mergeTwoLists([1], []), [1])
+        self.assertEqual(self.solution.mergeTwoLists([1], None), [1])
 
     def test_mergeTwoLists_example_11(self):
         self.assertEqual(self.solution.mergeTwoLists([0], [0]), [0, 0])
