@@ -5,13 +5,24 @@
 class Solution:
     def validPalindrome(self, s: str) -> bool:
         """
-        Returns true if the str s can be a palindrome by removing 0 or 1 characters from it. False otherwise.
-        Time complexity: O(n^2)
-        Space complexity: O(n)
+        Checks if a string is a palindrome when removing up to 1 character.
+        Two-pointer solution.
+        Time complexity: O(n)
+        Space complexity: O(1)
         """
-        for i in range(len(s)):
-            copy = s[:i] + s[i + 1:]
-            if copy == copy[::-1]:
-                return True
+        def is_palindrome_range(left: int, right: int) -> bool:
+            while left < right:
+                if s[left] != s[right]:
+                    return False
+                left += 1
+                right -= 1
+            return True
 
-        return False
+        left, right = 0, len(s) - 1
+        while left < right:
+            if s[left] != s[right]:
+                # Try skipping either the left or right character
+                return is_palindrome_range(left + 1, right) or is_palindrome_range(left, right - 1)
+            left += 1
+            right -= 1
+        return True

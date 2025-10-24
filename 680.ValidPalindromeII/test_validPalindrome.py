@@ -3,8 +3,11 @@ import pytest
 
 
 cases = [
+    ("", True),
     ("aba", True),
     ("abca", True),
+    ("caba", True),
+    ("abac", True),
     ("abc", False),
 ]
 
