@@ -3,7 +3,7 @@
 
 
 class Solution:
-    def validPalindrome(self, s: str) -> bool:
+    def validPalindrome2(self, s: str) -> bool:
         """
         Checks if a string is a palindrome when removing up to 1 character.
         Two-pointer solution.
