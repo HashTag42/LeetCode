@@ -3,15 +3,12 @@
 
 class Solution:
     def myPow(self, x: float, n: int) -> float:
-        # Time Complexity: O(N)
-        if n > 0:
-            expo = x
-            for _ in range(1, n):
-                expo *= x
-        elif n == 0:
-            expo = 1
-        else:   # n < 0
-            expo = 1 / x
-            for _ in range(1, abs(n)):
-                expo /= x
-        return expo
+        """
+        Recursive implementation:
+        Time Complexity: O(n)
+        """
+        if n == 0:
+            return 1
+        if n < 0:
+            return 1 / self.myPow(x, -n)
+        return x * self.myPow(x, n - 1)
