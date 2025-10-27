@@ -6,6 +6,10 @@ https://leetcode.com/problems/merge-strings-alternately/
 
 class Solution:
     def mergeAlternately(self, word1: str, word2: str) -> str:
+        """
+        Time complexity: O((n + m)^ 2)      # Not great!
+        Space complexity: O(n + m)
+        """
         result = ""
         if len(word1) <= len(word2):
             short_word, long_word = word1, word2
