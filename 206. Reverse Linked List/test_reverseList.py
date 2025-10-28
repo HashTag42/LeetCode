@@ -1,5 +1,4 @@
-from reverseList import Solution
-from LinkedList import LinkedList
+from reverseList import Solution, ListNode
 import pytest
 
 
@@ -12,15 +11,23 @@ cases = [
 
 @pytest.mark.parametrize("nodes, expected", cases)
 def test__reverseList(nodes, expected):
-    solution = Solution()
+    # Convert input list to a linked list
+    in_head = ListNode(None)
+    current = in_head
+    for i in range(len(nodes)):
+        current.val = nodes[i]
+        if i < len(nodes) - 1:
+            current.next = ListNode()
+            current = current.next
 
-    ll_in = LinkedList(nodes)
-    out_head = solution.reverseList(ll_in.head)
+    in_head = None if in_head.val is None else in_head
+    out_head = Solution().reverseList(in_head)
 
+    # Conver resulting linked list to a list
     out_list = list()
     current = out_head
     while current:
-        out_list.append(current.data)
+        out_list.append(current.val)
         current = current.next
 
     assert out_list == expected
