@@ -9,9 +9,7 @@ You must do this by modifying the input array in-place with `O(1)` extra memory.
 from typing import List
 
 
-def reverse_string(s: List[str]) -> List[str]:
-    length = len(s)
-    for i in range(length // 2):
-        temp = s[i]
-        s[i] = s[length - i - 1]
-        s[length - i - 1] = temp
+def reverse_string(s: List[str]) -> None:
+    """Reverse the list of characters in-place."""
+    for i in range(len(s) // 2):
+        s[i], s[~i] = s[~i], s[i]   # ~i is equivalent to -(i+1)

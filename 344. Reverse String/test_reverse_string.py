@@ -2,6 +2,7 @@ from reverse_string import reverse_string
 import pytest
 
 test_cases = [
+    ([None], [None]),
     ([], []),
     (["a"], ["a"]),
     (["a", "b"], ["b", "a"]),
