@@ -11,19 +11,20 @@ It can be proven that the answer is unique.
 
 
 def remove_duplicates(s: str) -> str:
-    length = len(s)
-    string = list(s)
-    i = 0
+    '''
+    Time complexity: O(n)
+    Space complexity: O(n)
+    '''
+    if len(s) < 2:
+        return s
+    chars = [s[0]]
+    i = 1
     while True:
-        if 1 < length and i < length - 1:
-            if string[i] == string[i + 1]:
-                # Remove both characters
-                string.pop(i + 1)
-                string.pop(i)
-                length -= 2
-                i = 0
-            else:
-                i += 1
+        if len(chars) >= 1 and chars[-1] == s[i]:
+            chars.pop()
         else:
+            chars.append(s[i])
+        i += 1
+        if i == len(s):
             break
-    return ''.join(string)
+    return ''.join(chars)

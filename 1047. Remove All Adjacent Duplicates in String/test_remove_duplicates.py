@@ -3,6 +3,8 @@ import pytest
 
 test_cases = [
     # s, expected
+    ('', ''),
+    ('a', 'a'),
     ('ab', 'ab'),
     ('aa', ''),
     ('abbaca', 'ca'),
