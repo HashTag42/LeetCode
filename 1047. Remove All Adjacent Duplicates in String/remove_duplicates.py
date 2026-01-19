@@ -15,16 +15,10 @@ def remove_duplicates(s: str) -> str:
     Time complexity: O(n)
     Space complexity: O(n)
     '''
-    if len(s) < 2:
-        return s
-    chars = [s[0]]
-    i = 1
-    while True:
-        if len(chars) >= 1 and chars[-1] == s[i]:
+    chars = []
+    for ch in s:
+        if chars and chars[-1] == ch:
             chars.pop()
         else:
-            chars.append(s[i])
-        i += 1
-        if i == len(s):
-            break
+            chars.append(ch)
     return ''.join(chars)
