@@ -1,5 +1,5 @@
 '''
-LeetCode problem 496. Next Greter Element I
+LeetCode problem 496. Next Greater Element I
 https://leetcode.com/problems/next-greater-element-i/
 
 The next greater element of some element `x` in an array is the
@@ -36,7 +36,7 @@ test_cases = [
 def next_greater_element(nums1: list[int], nums2: list[int]) -> list[int]:
     '''
     Time complexity: O(len(nums1) + len(nums2))
-    Space complexity: O(n)
+    Space complexity: O(len(nums2))
     '''
     next_greater = {}
     stack = []
