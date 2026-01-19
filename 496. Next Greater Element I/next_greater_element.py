@@ -35,16 +35,15 @@ test_cases = [
 
 def next_greater_element(nums1: list[int], nums2: list[int]) -> list[int]:
     '''
-    Time complexity: O(len(nums1) * len(nums2))
-    Space complexity: O(len(nums1))
+    Time complexity: O(len(nums1) + len(nums2))
+    Space complexity: O(n)
     '''
-    ans = []
-    for n1 in nums1:
-        idx = nums2.index(n1)
-        next_greater = -1
-        for n2 in nums2[idx+1:]:
-            if n2 > n1:
-                next_greater = n2
-                break
-        ans.append(next_greater)
-    return ans
+    next_greater = {}
+    stack = []
+
+    for num in nums2:
+        while stack and num > stack[-1]:
+            next_greater[stack.pop()] = num
+        stack.append(num)
+
+    return [next_greater.get(n, -1) for n in nums1]
