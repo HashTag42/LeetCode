@@ -24,6 +24,9 @@ Constraints:
 
 test_cases = [
     # nums1, nums2, expected
+    ([1], [1], [-1]),
+    ([1], [1, 2], [2]),
+    ([1], [1, 2, 3], [2]),
     ([4, 1, 2], [1, 3, 4, 2], [-1, 3, -1]),
     ([2, 4], [1, 2, 3, 4], [3, -1]),
 ]
@@ -31,17 +34,17 @@ test_cases = [
 
 
 def next_greater_element(nums1: list[int], nums2: list[int]) -> list[int]:
-    ans: list[int] = []
+    '''
+    Time complexity: O(len(nums1) * len(nums2))
+    Space complexity: O(len(nums1))
+    '''
+    ans = []
     for n1 in nums1:
-        found: bool = False
-        greater: int = -2
-        for n2 in nums2:
-            if found and n2 > n1:
-                ans.append(n2)
-                greater = n2
+        idx = nums2.index(n1)
+        next_greater = -1
+        for n2 in nums2[idx+1:]:
+            if n2 > n1:
+                next_greater = n2
                 break
-            if n1 == n2:
-                found = True
-        if not found or greater == -2:
-            ans.append(-1)
+        ans.append(next_greater)
     return ans
