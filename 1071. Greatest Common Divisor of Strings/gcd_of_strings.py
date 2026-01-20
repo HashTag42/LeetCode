@@ -27,8 +27,8 @@ def gcd_of_strings(str1: str, str2: str) -> str:
     '''
     Returns the largest string `x` such that `x` divides both `str1` and `str2`.
 
-    Time complexity:
-    Space complexity:
+    Time complexity: O(len(str1) * len(str2)^2)
+    Space complexity: O(len(str1) + len(str2))
     '''
     x, current = '', ''
     for ch in str2:
