@@ -28,8 +28,8 @@ class Solution:
         '''
         Returns True if s is a subsequence of t, or False otherwise.
 
-        Time complexity: O(len(s) + len(t))
-        Space complexity: O(len(s))
+        Time complexity: O(len(t))
+        Space complexity: O(1)
         '''
         s_idx = 0
         for char in t:
