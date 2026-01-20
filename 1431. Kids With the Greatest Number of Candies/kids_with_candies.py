@@ -33,10 +33,7 @@ def kids_with_candies(candies: list[int], extra_candies: int) -> list[bool]:
     of candies among all the kids, or `false` otherwise.
 
     Time complexity: O(n)
-    Space complexity: O(n)
+    Space complexity: O(1)
     '''
-    result: list[bool] = []
     max_candies = max(candies)
-    for i in range(len(candies)):
-        result.append(candies[i] + extra_candies >= max_candies)
-    return result
+    return [candy + extra_candies >= max_candies for candy in candies]
