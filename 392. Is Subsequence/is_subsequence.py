@@ -31,15 +31,8 @@ class Solution:
         Time complexity: O(len(s) + len(t))
         Space complexity: O(len(s))
         '''
-        accumulated = ''
-        t_idx = 0
-        for s_idx in range(len(s)):
-            next_char = s[s_idx]
-            for j in range(t_idx, len(t)):
-                if t[j] == next_char:
-                    accumulated += next_char
-                    t_idx = j + 1
-                    break
-        if accumulated == s:
-            return True
-        return False
+        s_idx = 0
+        for char in t:
+            if s_idx < len(s) and char == s[s_idx]:
+                s_idx += 1
+        return s_idx == len(s)
