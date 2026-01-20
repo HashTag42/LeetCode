@@ -23,14 +23,22 @@ Constraints:
     s consist of printable ASCII characters.
 '''
 
+VOWELS: set[str] = set('aeiouAEIOU')
+
 
 def reverse_vowels(s: str) -> str:
+    '''
+    Reverse all the vowels in a string.
+
+    Time complexity: O(n)
+    Space complexity: O(n)
+    '''
     result = list(s)
     # Collect all the vowels and their indexes
     vowels: list[str] = []
     indexes: list[int] = []
     for i, v in enumerate(s):
-        if v in 'aeiouAEIOU':
+        if v in VOWELS:
             vowels.append(v)
             indexes.append(i)
 
@@ -38,7 +46,7 @@ def reverse_vowels(s: str) -> str:
     vowels.reverse()
 
     # Replace the vowels in s
-    for i in range(len(vowels)):
-        result[indexes[i]] = vowels[i]
+    for idx, vowel in zip(indexes, vowels):
+        result[idx] = vowel
 
     return ''.join(result)
