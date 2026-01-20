@@ -21,31 +21,12 @@ test_cases = [
     ('AAAAAB', 'AAA', ''),
 ]
 '''
+from math import gcd
 
 
 def gcd_of_strings(str1: str, str2: str) -> str:
-    '''
-    Returns the largest string `x` such that `x` divides both `str1` and `str2`.
-
-    Time complexity: O(len(str1) * len(str2)^2)
-    Space complexity: O(len(str1) + len(str2))
-    '''
-    x, current = '', ''
-    for ch in str2:
-        current += ch
-        if divides_by(str1, current) and divides_by(str2, current):
-            x = current
-    return x
-
-
-def divides_by(s1: str, s2: str) -> bool:
-    if len(s1) % len(s2) != 0:
-        return False
-    times = len(s1) // len(s2)
-    if times >= 2:
-        repeat = s2
-        for i in range(1, times):
-            s2 += repeat
-    if s1 == s2:
-        return True
-    return False
+    # If a common divisor exists, concatenation order doesn't matter
+    if str1 + str2 != str2 + str1:
+        return ''
+    # The GCD string length equals GCD of the two lengths
+    return str1[:gcd(len(str1), len(str2))]
