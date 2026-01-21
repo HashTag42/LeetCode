@@ -41,11 +41,13 @@ def pivot_index(nums: list[int]) -> int:
     '''
     Returns the leftmost pivot index. If no such index exists, returns -1.
 
-    Complexity: O(N^2) time / O(n) space
+    Complexity: O(n) time / O(1) space
     '''
-    for i in range(len(nums)):
-        left_sum = sum(nums[:i])
-        right_sum = sum(nums[i + 1:])
+    total = sum(nums)
+    left_sum = 0
+    for i, num in enumerate(nums):
+        right_sum = total - left_sum - num
         if left_sum == right_sum:
             return i
+        left_sum += num
     return -1
