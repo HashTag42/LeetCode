@@ -26,8 +26,10 @@ Constraints:
 
 
 def largest_altitude(gain: list[int]) -> int:
-    current = 0
-    max_altitude = 0
+    '''
+    Complexity: O(n) time / O(1) space
+    '''
+    current, max_altitude = 0, 0
     for g in gain:
         current += g
         max_altitude = max(max_altitude, current)
