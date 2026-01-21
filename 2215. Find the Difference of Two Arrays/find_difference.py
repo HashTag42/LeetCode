@@ -35,11 +35,4 @@ def find_difference(nums1: list[int], nums2: list[int]) -> list[list[int]]:
     Complexity: O(n + m) time, O(n + m) space
     '''
     set1, set2 = set(nums1), set(nums2)
-    result1, result2 = set(), set()
-    for n1 in set1:
-        if n1 not in set2:
-            result1.add(n1)
-    for n2 in set2:
-        if n2 not in set1:
-            result2.add(n2)
-    return [list(result1), list(result2)]
+    return [list(set1 - set2), list(set2 - set1)]
