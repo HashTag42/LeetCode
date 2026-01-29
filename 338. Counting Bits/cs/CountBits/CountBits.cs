@@ -24,28 +24,21 @@ Example 2:
         4 --> 100
         5 --> 101
 */
+using System.Numerics;
+
 namespace LeetCode.CountBits;
 
 public class CountBits
 {
     // Complexity:
-    //      Time: O(n log n)
+    //      Time: O(n)
     //      Space: O(n)
     public static int[] Solve(int n)
     {
         int[] result = new int[n + 1];
-        for (int i = 0; i < n + 1; i++)
+        for (int i = 0; i <= n; i++)
         {
-            string binary = Convert.ToString(i, 2);
-            int count = 0;
-            foreach (char ch in binary)
-            {
-                if (ch == '1')
-                {
-                    count++;
-                }
-            }
-            result[i] = count;
+            result[i] = BitOperations.PopCount((uint)i);
         }
         return result;
     }
