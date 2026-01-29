@@ -3,127 +3,58 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.13.36105.23
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Two Sum", "1. Two Sum", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
-EndProject
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "1. Two Sum (Python)", "1. Two Sum\py\1. Two Sum (Python).pyproj", "{83850E52-3E27-4504-93C7-76F53A419295}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "88. Merge Sorted Array", "88. Merge Sorted Array", "{05602B7B-46E5-4338-90FB-3248FD9C39DD}"
-EndProject
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "88. Merge Sorted Array (Python)", "88. Merge Sorted Array\py\88. Merge Sorted Array (Python).pyproj", "{741E5550-9FDD-4C93-B44E-1B1AFD5664E0}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "121. Best Time to Buy and Sell Stock", "121. Best Time to Buy and Sell Stock", "{944C5402-D20B-4754-BC57-BBBB67059C14}"
-EndProject
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "121. Best Time to Buy and Sell Stock (Python)", "121. Best Time to Buy and Sell Stock\py\121. Best Time to Buy and Sell Stock (Python).pyproj", "{131CA4F7-3ECE-430E-BB78-1385BFBBB835}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "20. Valid Parentheses", "20. Valid Parentheses", "{C4B22CAA-3C34-41A5-92D5-7FE46406ADEC}"
-EndProject
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "20. Valid Parentheses (Python)", "20. Valid Parentheses\20. Valid Parentheses (Python)\20. Valid Parentheses (Python).pyproj", "{6BCCD7A9-C420-429F-8BFA-432058B45458}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "733. Flood Fill", "733. Flood Fill", "{7F18D4B5-0004-4DA9-9C75-08B115242A7D}"
-EndProject
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "733. Flood Fill (Python)", "733. Flood Fill\py\733. Flood Fill (Python).pyproj", "{EA6B14B4-B123-407B-84D0-F2A585F56E8B}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2236. Root Equals Sum of Children", "2236. Root Equals Sum of Children", "{51BBE0AF-7D0B-4181-B353-1E16F4B79DFE}"
-EndProject
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "2236. Root Equals Sum of Children (Python)", "2236. Root Equals Sum of Children\py\2236. Root Equals Sum of Children (Python).pyproj", "{A6A5F543-3179-4458-A825-FD86FFB453D9}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2235. Add Two Integers", "2235. Add Two Integers", "{73A77542-62BD-4E86-9AB0-BB16FF81FE82}"
-EndProject
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "2235. Add Two Integers (Python)", "2235. Add Two Integers\py\2235. Add Two Integers (Python).pyproj", "{9B3CCFD1-E9B1-4DAA-897C-78F39065861E}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1480. Running Sum of 1d Array", "1480. Running Sum of 1d Array", "{835A03FE-0E64-4EA9-BD6C-6434A7A940DB}"
-EndProject
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "1480. Running Sum of 1d Array (Python)", "1480. Running Sum of 1d Array\py\1480. Running Sum of 1d Array (Python).pyproj", "{5AA2B339-D847-4312-81A3-EAA9EE1BEB36}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1672. Richest Customer Wealth", "1672. Richest Customer Wealth", "{CE79C0F0-0087-4693-8A70-E3E3547E8E78}"
-EndProject
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "1672. Richest Customer Wealth (Python)", "1672. Richest Customer Wealth\py\1672. Richest Customer Wealth (Python).pyproj", "{49E585AD-9A5A-4D02-889E-6CE65CD6010D}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "412. Fizz Buzz", "412. Fizz Buzz", "{BCCB724B-BACE-45CB-922C-9F57D4D634B0}"
-EndProject
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "412. Fizz Buzz (Python)", "412. Fizz Buzz\py\412. Fizz Buzz (Python).pyproj", "{119B5EE2-F772-4EFA-B41A-295B07D7ADF7}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1342. Number of Steps to Reduce a Number to Zero", "1342. Number of Steps to Reduce a Number to Zero", "{268871DB-AAAD-4F02-BDE4-057FC2AD4474}"
-EndProject
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "1342. Number of Steps to Reduce a Number to Zero (Python)", "1342. Number of Steps to Reduce a Number to Zero\py\1342. Number of Steps to Reduce a Number to Zero (Python).pyproj", "{F91240DF-1A31-4149-9799-8E20030EE802}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "876. Middle of the Linked List", "876. Middle of the Linked List", "{F81001BF-E1C0-4F30-9E55-CA267CB3A1FC}"
-EndProject
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "876. Middle of the Linked List (Python)", "876. Middle of the Linked List\py\876. Middle of the Linked List (Python).pyproj", "{B8E1616A-6541-4CA2-9C63-2D3D55B8B395}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "383. Ransom Note", "383. Ransom Note", "{3ED7CBFD-49FF-40C3-9441-49E1BD798AFA}"
-EndProject
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "383. Ransom Note (Python)", "383. Ransom Note\py\383. Ransom Note (Python).pyproj", "{741BFF39-78AD-4437-8026-56BCFF994AEB}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "9. Palindrome Number", "9. Palindrome Number", "{A3AE16E7-68B8-4608-B301-49CAF579FF61}"
-EndProject
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "9. Palindrome Number (Python)", "9.PalindromeNumber\py\9. Palindrome Number (Python).pyproj", "{7019B572-D08E-4D01-B1F5-930B19A2F046}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "118. Pascal Triangle", "118. Pascal Triangle", "{696BC0EF-F6E6-4198-92A9-BDF3CCE0650B}"
-EndProject
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "118. Pascal Triangle (Python)", "118. Pascal Triangle\py\118. Pascal Triangle (Python).pyproj", "{09891C28-D01A-4509-8652-46AC5C93157A}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}"
-	ProjectSection(SolutionItems) = preProject
-		.flake8 = .flake8
-	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "933. Number of Recent Calls", "933. Number of Recent Calls", "{CA69649D-3BB0-1114-5A3D-787EB7739301}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "cs", "cs", "{9BDC05A5-0E33-94D9-E824-B4934485FD09}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecentCounter", "933. Number of Recent Calls\cs\RecentCounter\RecentCounter.csproj", "{066A0AB7-D917-49F0-A257-30CB449BCB39}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecentCounterTests", "933. Number of Recent Calls\cs\RecentCounterTests\RecentCounterTests.csproj", "{506A5B2D-C584-46AE-98C9-F9A11887DF4E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
 		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{83850E52-3E27-4504-93C7-76F53A419295}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{83850E52-3E27-4504-93C7-76F53A419295}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{741E5550-9FDD-4C93-B44E-1B1AFD5664E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{741E5550-9FDD-4C93-B44E-1B1AFD5664E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{131CA4F7-3ECE-430E-BB78-1385BFBBB835}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{131CA4F7-3ECE-430E-BB78-1385BFBBB835}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6BCCD7A9-C420-429F-8BFA-432058B45458}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6BCCD7A9-C420-429F-8BFA-432058B45458}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EA6B14B4-B123-407B-84D0-F2A585F56E8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EA6B14B4-B123-407B-84D0-F2A585F56E8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A6A5F543-3179-4458-A825-FD86FFB453D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A6A5F543-3179-4458-A825-FD86FFB453D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9B3CCFD1-E9B1-4DAA-897C-78F39065861E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9B3CCFD1-E9B1-4DAA-897C-78F39065861E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5AA2B339-D847-4312-81A3-EAA9EE1BEB36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5AA2B339-D847-4312-81A3-EAA9EE1BEB36}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{49E585AD-9A5A-4D02-889E-6CE65CD6010D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{49E585AD-9A5A-4D02-889E-6CE65CD6010D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{119B5EE2-F772-4EFA-B41A-295B07D7ADF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{119B5EE2-F772-4EFA-B41A-295B07D7ADF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F91240DF-1A31-4149-9799-8E20030EE802}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F91240DF-1A31-4149-9799-8E20030EE802}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B8E1616A-6541-4CA2-9C63-2D3D55B8B395}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B8E1616A-6541-4CA2-9C63-2D3D55B8B395}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{741BFF39-78AD-4437-8026-56BCFF994AEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{741BFF39-78AD-4437-8026-56BCFF994AEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7019B572-D08E-4D01-B1F5-930B19A2F046}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7019B572-D08E-4D01-B1F5-930B19A2F046}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{09891C28-D01A-4509-8652-46AC5C93157A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{09891C28-D01A-4509-8652-46AC5C93157A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{066A0AB7-D917-49F0-A257-30CB449BCB39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{066A0AB7-D917-49F0-A257-30CB449BCB39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{066A0AB7-D917-49F0-A257-30CB449BCB39}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{066A0AB7-D917-49F0-A257-30CB449BCB39}.Debug|x64.Build.0 = Debug|Any CPU
+		{066A0AB7-D917-49F0-A257-30CB449BCB39}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{066A0AB7-D917-49F0-A257-30CB449BCB39}.Debug|x86.Build.0 = Debug|Any CPU
+		{066A0AB7-D917-49F0-A257-30CB449BCB39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{066A0AB7-D917-49F0-A257-30CB449BCB39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{066A0AB7-D917-49F0-A257-30CB449BCB39}.Release|x64.ActiveCfg = Release|Any CPU
+		{066A0AB7-D917-49F0-A257-30CB449BCB39}.Release|x64.Build.0 = Release|Any CPU
+		{066A0AB7-D917-49F0-A257-30CB449BCB39}.Release|x86.ActiveCfg = Release|Any CPU
+		{066A0AB7-D917-49F0-A257-30CB449BCB39}.Release|x86.Build.0 = Release|Any CPU
+		{506A5B2D-C584-46AE-98C9-F9A11887DF4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{506A5B2D-C584-46AE-98C9-F9A11887DF4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{506A5B2D-C584-46AE-98C9-F9A11887DF4E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{506A5B2D-C584-46AE-98C9-F9A11887DF4E}.Debug|x64.Build.0 = Debug|Any CPU
+		{506A5B2D-C584-46AE-98C9-F9A11887DF4E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{506A5B2D-C584-46AE-98C9-F9A11887DF4E}.Debug|x86.Build.0 = Debug|Any CPU
+		{506A5B2D-C584-46AE-98C9-F9A11887DF4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{506A5B2D-C584-46AE-98C9-F9A11887DF4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{506A5B2D-C584-46AE-98C9-F9A11887DF4E}.Release|x64.ActiveCfg = Release|Any CPU
+		{506A5B2D-C584-46AE-98C9-F9A11887DF4E}.Release|x64.Build.0 = Release|Any CPU
+		{506A5B2D-C584-46AE-98C9-F9A11887DF4E}.Release|x86.ActiveCfg = Release|Any CPU
+		{506A5B2D-C584-46AE-98C9-F9A11887DF4E}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{83850E52-3E27-4504-93C7-76F53A419295} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
-		{741E5550-9FDD-4C93-B44E-1B1AFD5664E0} = {05602B7B-46E5-4338-90FB-3248FD9C39DD}
-		{131CA4F7-3ECE-430E-BB78-1385BFBBB835} = {944C5402-D20B-4754-BC57-BBBB67059C14}
-		{6BCCD7A9-C420-429F-8BFA-432058B45458} = {C4B22CAA-3C34-41A5-92D5-7FE46406ADEC}
-		{EA6B14B4-B123-407B-84D0-F2A585F56E8B} = {7F18D4B5-0004-4DA9-9C75-08B115242A7D}
-		{A6A5F543-3179-4458-A825-FD86FFB453D9} = {51BBE0AF-7D0B-4181-B353-1E16F4B79DFE}
-		{9B3CCFD1-E9B1-4DAA-897C-78F39065861E} = {73A77542-62BD-4E86-9AB0-BB16FF81FE82}
-		{5AA2B339-D847-4312-81A3-EAA9EE1BEB36} = {835A03FE-0E64-4EA9-BD6C-6434A7A940DB}
-		{49E585AD-9A5A-4D02-889E-6CE65CD6010D} = {CE79C0F0-0087-4693-8A70-E3E3547E8E78}
-		{119B5EE2-F772-4EFA-B41A-295B07D7ADF7} = {BCCB724B-BACE-45CB-922C-9F57D4D634B0}
-		{F91240DF-1A31-4149-9799-8E20030EE802} = {268871DB-AAAD-4F02-BDE4-057FC2AD4474}
-		{B8E1616A-6541-4CA2-9C63-2D3D55B8B395} = {F81001BF-E1C0-4F30-9E55-CA267CB3A1FC}
-		{741BFF39-78AD-4437-8026-56BCFF994AEB} = {3ED7CBFD-49FF-40C3-9441-49E1BD798AFA}
-		{7019B572-D08E-4D01-B1F5-930B19A2F046} = {A3AE16E7-68B8-4608-B301-49CAF579FF61}
-		{09891C28-D01A-4509-8652-46AC5C93157A} = {696BC0EF-F6E6-4198-92A9-BDF3CCE0650B}
+		{9BDC05A5-0E33-94D9-E824-B4934485FD09} = {CA69649D-3BB0-1114-5A3D-787EB7739301}
+		{066A0AB7-D917-49F0-A257-30CB449BCB39} = {9BDC05A5-0E33-94D9-E824-B4934485FD09}
+		{506A5B2D-C584-46AE-98C9-F9A11887DF4E} = {9BDC05A5-0E33-94D9-E824-B4934485FD09}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F54B2A8A-1227-4026-96DF-8E4FDEC508B3}
