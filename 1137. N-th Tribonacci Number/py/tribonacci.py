@@ -24,8 +24,10 @@ Constraints:
 '''
 
 
-def tribonacci(num: int) -> int:
-    results = [0, 1, 1]
-    for i in range(3, num + 1):
-        results.append(results[-1] + results[-2] + results[-3])
-    return results[num]
+def tribonacci(n: int) -> int:
+    if n < 2:
+        return n
+    a, b, c = 0, 1, 1
+    for i in range(3, n + 1):
+        a, b, c = b, c, a + b + c
+    return c
