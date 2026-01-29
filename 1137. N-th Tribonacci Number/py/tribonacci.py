@@ -17,6 +17,10 @@ Example 1:
 Example 2:
     Input: n = 25
     Output: 1389537
+
+Constraints:
+    0 <= n <= 37
+    The answer is guaranteed to fit within a 32-bit integer, ie. answer <= 2^31 - 1.
 '''
 
 
