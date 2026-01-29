@@ -24,18 +24,12 @@ Example 2:
         4 --> 100
         5 --> 101
 '''
-from collections import Counter
 
 
 def count_bits(n: int) -> list[int]:
     '''
     Complexity:
-        Time: O(n log n)
+        Time: O(n)
         Space: O(n)
     '''
-    result: list[int] = []
-    for i in range(0, n + 1):
-        b = bin(i)
-        c = Counter(b)
-        result.append(c['1'])
-    return result
+    return [i.bit_count() for i in range(n + 1)]
