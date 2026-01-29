@@ -31,18 +31,27 @@ Constraints:
     Each test case will call ping with strictly increasing values of t.
     At most 104 calls will be made to ping.
 '''
-PAST_mSECONDS = 3000
+from collections import deque
+
+WINDOW_MS = 3000
 
 
 class RecentCounter:
+    '''
+    Complexity
+        Runtime:
+            Per ping: O(1) amortized
+            For N pings: O(N)
+        Space: O(n) worst case
+    '''
     def __init__(self):
-        self.requests: list[int] = []
+        self.requests = deque()
 
     def ping(self, t: int) -> int:
         self.requests.append(t)
-        start = t - PAST_mSECONDS
-        count = 0
-        for r in self.requests:
-            if start <= r <= t:
-                count += 1
-        return count
+        start = t - WINDOW_MS
+
+        while self.requests[0] < start:
+            self.requests.popleft()
+
+        return len(self.requests)
