@@ -27,13 +27,15 @@ namespace LeetCode.Tribonacci;
 
 public class Tribonacci
 {
-    public static int Calculate(int num)
+    // Complexity: O(n) Time, O(1) Space
+    public static int Calculate(int n)
     {
-        List<int> results = [0, 1, 1];
-        for (int i = 3; i <= num; i++)
+        if (n < 2) return n;
+        int a = 0, b = 1, c = 1;
+        for (int i = 3; i <= n; i++)
         {
-            results.Add(results[^1] + results[^2] + results[^3]);
+            (a, b, c) = (b, c, a + b + c);
         }
-        return results[num];
+        return c;
     }
 }
