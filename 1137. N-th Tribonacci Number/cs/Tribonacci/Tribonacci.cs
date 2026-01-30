@@ -1,5 +1,6 @@
 /*
 LeetCode problem 1137. N-th Tribonacci Number
+https://leetcode.com/problems/n-th-tribonacci-number/description/
 
 The Tribonacci sequence Tn is defined as follows:
 
@@ -27,15 +28,24 @@ namespace LeetCode.Tribonacci;
 
 public class Tribonacci
 {
-    // Complexity: O(n) Time, O(1) Space
+    /*
+    Returns the value of N-th number in the Tribonacci sequence
+
+    Complexity:
+        Time: O(n)
+        Space: O(1)
+    */
     public static int Calculate(int n)
     {
-        if (n < 2) return n;
+        if (n < 2)
+            return n;
+
         int a = 0, b = 1, c = 1;
         for (int i = 3; i <= n; i++)
         {
             (a, b, c) = (b, c, a + b + c);
         }
+
         return c;
     }
 }
