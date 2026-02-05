@@ -36,52 +36,40 @@ Constraints:
 
 namespace LeetCode.GuessGame;
 
-public class GuessGame
+public class GuessGame(int pick)
 {
+    //
+    // FIELDS
+    //
+    private readonly int pick = pick;
 
-    private readonly int pick;
-
-    public GuessGame(int pick)
-    {
-        this.pick = pick;
-    }
-
+    //
+    // METHODS
+    //
     public int GuessNumber(int n)
     {
-        int bottom = 0;
-        int top = n;
-        int num = n / 2;
+        int low = 1;
+        int high = n;
         while (true)
         {
-            int result = guess(num);
+            int mid = low + (high - low) / 2;
+            int result = Guess(mid);
             if (result == 1)
-            {
-                bottom = num;
-                int delta = (top - num) / 2;
-                delta = delta == 0 ? 1 : delta;
-                num += delta;
-            }
+                low = mid + 1;
             else if (result == -1)
-            {
-                top = num;
-                int delta = (num - bottom) / 2;
-                delta = delta == 0 ? 1 : delta;
-                num -= delta;
-            }
-            else    // result == 0
-            {
-                return num;
-            }
+                high = mid - 1;
+            else // result == 0
+                return mid;
         }
     }
 
-    public int guess(int num)
+    public int Guess(int num)
     {
         if (num > pick)
             return -1;
-        else if (num < this.pick)
+        else if (num < pick)
             return 1;
-        else
+        else  // num == pick
             return 0;
     }
 }

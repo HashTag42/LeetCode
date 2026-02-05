@@ -35,29 +35,26 @@ Constraints:
 '''
 
 
-def guess_number(n: int, pick: int) -> int:
-    bottom, top = 0, n
-    num = n // 2
-    while True:
-        result = guess(num, pick)
-        if result == 1:
-            bottom = num
-            delta = (top - num) // 2
-            delta = 1 if delta == 0 else delta
-            num += delta
-        elif result == -1:
-            top = num
-            delta = (num - bottom) // 2
-            delta = 1 if delta == 0 else delta
-            num -= delta
-        else:   # result == 0
-            return num
+class Solution:
+    def __init__(self, pick: int) -> None:
+        self.pick = pick
 
+    def guess_number(self, n: int) -> int:
+        low, high = 1, n
+        while True:
+            mid = (low + high) // 2
+            result = self.guess(mid)
+            if result == 1:
+                low = mid + 1
+            elif result == -1:
+                high = mid - 1
+            else:  # result == 0
+                return mid
 
-def guess(num: int, pick: int) -> int:
-    if num > pick:
-        return -1
-    elif num < pick:
-        return 1
-    else:   # num == pick
-        return 0
+    def guess(self, num: int) -> int:
+        if num > self.pick:
+            return -1
+        elif num < self.pick:
+            return 1
+        else:  # num == pick
+            return 0
