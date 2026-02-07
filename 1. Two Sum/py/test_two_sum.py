@@ -1,7 +1,7 @@
 import json
 import pathlib
 import pytest
-from TwoSum import Solution
+from two_sum import Solution
 
 root = pathlib.Path(__file__).resolve().parents[1]
 test_cases_path = root / "test_cases.json"
