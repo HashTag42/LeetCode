@@ -1,10 +1,10 @@
 # LeetCode challenge: 1. Two Sum: <https://leetcode.com/problems/two-sum/description/>
 
-from typing import List, Optional
+from typing import Optional
 
 
 class Solution:
-    def twoSum(self, nums: Optional[List[int]], target: int) -> Optional[List[int]]:
+    def twoSum(self, nums: Optional[list[int]], target: int) -> Optional[list[int]]:
         if nums is None or len(nums) < 2:
             return None
         for i in range(len(nums)):

@@ -1,22 +1,16 @@
-import unittest
+import json
+import pathlib
+import pytest
 from TwoSum import Solution
 
+root = pathlib.Path(__file__).resolve().parents[1]
+test_cases_path = root / "test_cases.json"
 
-class twoSum_Tests(unittest.TestCase):
-    def setUp(self):
-        self.solution = Solution()
+with open(test_cases_path) as f:
+    test_cases = json.load(f)
 
-    def test1(self):
-        self.assertEqual(self.solution.twoSum([2, 7, 11, 15], 9), [0, 1])
 
-    def test2(self):
-        self.assertEqual(self.solution.twoSum([3, 2, 4], 6), [1, 2])
-
-    def test3(self):
-        self.assertEqual(self.solution.twoSum([3, 3], 6), [0, 1])
-
-    def test4(self):
-        self.assertEqual(self.solution.twoSum([], 0), None)
-
-    def test5(self):
-        self.assertEqual(self.solution.twoSum(None, 6), None)
+@pytest.mark.parametrize('nums, target, expected', test_cases)
+def test_TwoSum(nums, target, expected):
+    sol = Solution()
+    assert sol.twoSum(nums, target) == expected
