@@ -9,7 +9,7 @@ public class Solution
     // Sliding window approach
     // Time Complexity: O(N)
     // Space Complexity: O(min(N, M)) where M is the charset size
-    public static int LengthOfLongestSubstring(string s)
+    public int LengthOfLongestSubstring(string s)
     {
         Dictionary<char, int> charIndex = [];
         int left = 0;
