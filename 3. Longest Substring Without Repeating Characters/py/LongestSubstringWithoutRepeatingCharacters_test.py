@@ -1,16 +1,17 @@
-import unittest
+import json
+import pathlib
+import pytest
 from LongestSubstringWithoutRepeatingCharacters import Solution
 
+root = pathlib.Path(__file__).resolve().parents[1]
 
-class Solution_lengthOfLongestSubstring_Tests(unittest.TestCase):
-    def setUp(self):
-        self.solution = Solution()
+lengthOfLongestSubstring_test_cases_path = root / "test_cases.json"
 
-    def test_lengthOfLongestSubstring_1(self):
-        self.assertEqual(self.solution.lengthOfLongestSubstring("abcabcbb"), 3)
+with open(lengthOfLongestSubstring_test_cases_path) as f:
+    lengthOfLongestSubstring_test_cases = json.load(f)
 
-    def test_lengthOfLongestSubstring_2(self):
-        self.assertEqual(self.solution.lengthOfLongestSubstring("bbbbb"), 1)
 
-    def test_lengthOfLongestSubstring_3(self):
-        self.assertEqual(self.solution.lengthOfLongestSubstring("pwwkew"), 3)
+@pytest.mark.parametrize('substring, expected', lengthOfLongestSubstring_test_cases)
+def test_lengthOfLongestSubstring(substring, expected):
+    sol = Solution()
+    assert sol.lengthOfLongestSubstring(substring) == expected
