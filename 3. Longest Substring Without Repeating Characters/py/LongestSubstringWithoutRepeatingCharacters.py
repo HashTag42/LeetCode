@@ -4,27 +4,19 @@
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
         """
-        Brute force approach
-        Time Complexity: O(N^3)
-        Space complexity: O(min(n,m)). We need O(k) space for checking a substring has no duplicate characters, where k
-        is the size of the Set. The size of the Set is upper bounded by the size of the string n and the size of the
-        charset/alphabet m.
+        Sliding window approach
+        Time Complexity: O(N)
+        Space Complexity: O(min(N, M)) where M is the charset size
         """
-        def check(start, end):
-            chars = set()
-            for i in range(start, end + 1):
-                c = s[i]
-                if c in chars:
-                    return False
-                chars.add(c)
-            return True
+        char_index = {}
+        left = 0
+        max_len = 0
 
-        n = len(s)
+        for right, c in enumerate(s):
+            if c in char_index and char_index[c] >= left:
+                left = char_index[c] + 1
+            char_index[c] = right
+            max_len = max(max_len, right - left + 1)
 
-        longest_substring_length = 0
-        for i in range(n):
-            for j in range(i, n):
-                if check(i, j):
-                    longest_substring_length = max(longest_substring_length, j - i + 1)
+        return max_len
 
-        return longest_substring_length
