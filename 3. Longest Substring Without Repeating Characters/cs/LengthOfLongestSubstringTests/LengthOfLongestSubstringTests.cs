@@ -1,5 +1,4 @@
 using System.Text.Json;
-using System.Text.Json.Nodes;
 using Shared;
 using Xunit;
 
@@ -15,7 +14,7 @@ public class LengthOfLongestSubstringTests
             var rows = TestDataLoader.LoadNestedArrayData("test_cases.json");
             foreach (var row in rows)
             {
-                var s = (JsonElement)row[0];
+                var s = ((JsonElement)row[0]).GetString()!;
                 var expected = ((JsonElement)row[1]).GetInt32();
                 data.Add(s, expected);
             }
@@ -27,6 +26,6 @@ public class LengthOfLongestSubstringTests
     [MemberData(nameof(TestCases))]
     public void TestLengthOfLongestSubstring(string s, int expected)
     {
-        Assert.Equal(expected, Solution.LengthOfLongestSubstring(s));
+        Assert.Equal(expected, new Solution().LengthOfLongestSubstring(s));
     }
 }

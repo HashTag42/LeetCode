@@ -85,6 +85,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IsPalindromeTests", "9. Pal
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IsPalindrome", "9. Palindrome Number\cs\IsPalindrome\IsPalindrome.csproj", "{F2F852B8-301B-433A-A311-1A2FAF61EAE8}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Longest Substring Without Repeating Characters", "3. Longest Substring Without Repeating Characters", "{A3B4C5D6-E7F8-9A0B-1C2D-3E4F5A6B7C8D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "cs", "cs", "{B4C5D6E7-F8A9-0B1C-2D3E-4F5A6B7C8D9E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LengthOfLongestSubstring", "3. Longest Substring Without Repeating Characters\cs\LengthOfLongestSubstring\LengthOfLongestSubstring.csproj", "{C5D6E7F8-A9B0-1C2D-3E4F-5A6B7C8D9E0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LengthOfLongestSubstringTests", "3. Longest Substring Without Repeating Characters\cs\LengthOfLongestSubstringTests\LengthOfLongestSubstringTests.csproj", "{D6E7F8A9-B0C1-2D3E-4F5A-6B7C8D9E0F1A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -347,6 +355,30 @@ Global
 		{F2F852B8-301B-433A-A311-1A2FAF61EAE8}.Release|x64.Build.0 = Release|Any CPU
 		{F2F852B8-301B-433A-A311-1A2FAF61EAE8}.Release|x86.ActiveCfg = Release|Any CPU
 		{F2F852B8-301B-433A-A311-1A2FAF61EAE8}.Release|x86.Build.0 = Release|Any CPU
+		{C5D6E7F8-A9B0-1C2D-3E4F-5A6B7C8D9E0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5D6E7F8-A9B0-1C2D-3E4F-5A6B7C8D9E0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5D6E7F8-A9B0-1C2D-3E4F-5A6B7C8D9E0F}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{C5D6E7F8-A9B0-1C2D-3E4F-5A6B7C8D9E0F}.Debug|x64.Build.0 = Debug|Any CPU
+		{C5D6E7F8-A9B0-1C2D-3E4F-5A6B7C8D9E0F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C5D6E7F8-A9B0-1C2D-3E4F-5A6B7C8D9E0F}.Debug|x86.Build.0 = Debug|Any CPU
+		{C5D6E7F8-A9B0-1C2D-3E4F-5A6B7C8D9E0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5D6E7F8-A9B0-1C2D-3E4F-5A6B7C8D9E0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5D6E7F8-A9B0-1C2D-3E4F-5A6B7C8D9E0F}.Release|x64.ActiveCfg = Release|Any CPU
+		{C5D6E7F8-A9B0-1C2D-3E4F-5A6B7C8D9E0F}.Release|x64.Build.0 = Release|Any CPU
+		{C5D6E7F8-A9B0-1C2D-3E4F-5A6B7C8D9E0F}.Release|x86.ActiveCfg = Release|Any CPU
+		{C5D6E7F8-A9B0-1C2D-3E4F-5A6B7C8D9E0F}.Release|x86.Build.0 = Release|Any CPU
+		{D6E7F8A9-B0C1-2D3E-4F5A-6B7C8D9E0F1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6E7F8A9-B0C1-2D3E-4F5A-6B7C8D9E0F1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6E7F8A9-B0C1-2D3E-4F5A-6B7C8D9E0F1A}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{D6E7F8A9-B0C1-2D3E-4F5A-6B7C8D9E0F1A}.Debug|x64.Build.0 = Debug|Any CPU
+		{D6E7F8A9-B0C1-2D3E-4F5A-6B7C8D9E0F1A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D6E7F8A9-B0C1-2D3E-4F5A-6B7C8D9E0F1A}.Debug|x86.Build.0 = Debug|Any CPU
+		{D6E7F8A9-B0C1-2D3E-4F5A-6B7C8D9E0F1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6E7F8A9-B0C1-2D3E-4F5A-6B7C8D9E0F1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6E7F8A9-B0C1-2D3E-4F5A-6B7C8D9E0F1A}.Release|x64.ActiveCfg = Release|Any CPU
+		{D6E7F8A9-B0C1-2D3E-4F5A-6B7C8D9E0F1A}.Release|x64.Build.0 = Release|Any CPU
+		{D6E7F8A9-B0C1-2D3E-4F5A-6B7C8D9E0F1A}.Release|x86.ActiveCfg = Release|Any CPU
+		{D6E7F8A9-B0C1-2D3E-4F5A-6B7C8D9E0F1A}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -382,6 +414,9 @@ Global
 		{7F05C5BB-4258-E766-7B0F-60F670191458} = {2AAF5CE3-FFBA-2C5C-E9FA-7BD612152CCB}
 		{82AC3AF6-5DCE-48BB-9303-426D4A8A8CBE} = {7F05C5BB-4258-E766-7B0F-60F670191458}
 		{F2F852B8-301B-433A-A311-1A2FAF61EAE8} = {7F05C5BB-4258-E766-7B0F-60F670191458}
+		{B4C5D6E7-F8A9-0B1C-2D3E-4F5A6B7C8D9E} = {A3B4C5D6-E7F8-9A0B-1C2D-3E4F5A6B7C8D}
+		{C5D6E7F8-A9B0-1C2D-3E4F-5A6B7C8D9E0F} = {B4C5D6E7-F8A9-0B1C-2D3E-4F5A6B7C8D9E}
+		{D6E7F8A9-B0C1-2D3E-4F5A-6B7C8D9E0F1A} = {B4C5D6E7-F8A9-0B1C-2D3E-4F5A6B7C8D9E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F54B2A8A-1227-4026-96DF-8E4FDEC508B3}
