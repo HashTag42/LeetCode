@@ -1,17 +1,18 @@
-import unittest
+import json
+import pathlib
+import pytest
 from PalindromeNumber import Solution
 
+root = pathlib.Path(__file__).resolve().parents[1]
 
-class Test_unittest_PalindromeNumber(unittest.TestCase):
+test_cases_path = root / "test_cases.json"
 
-    def setUp(self):
-        self.solution = Solution()
+with open(test_cases_path) as f:
+    test_cases = json.load(f)
 
-    def test_1(self):
-        self.assertEqual(self.solution.isPalindrome(121), True)
 
-    def test_2(self):
-        self.assertEqual(self.solution.isPalindrome(-121), False)
-
-    def test_3(self):
-        self.assertEqual(self.solution.isPalindrome(10), False)
+@pytest.mark.parametrize('x, expected', test_cases)
+def test_isPalindrome(x, expected):
+    sol = Solution()
+    actual = "true" if sol.isPalindrome(x) is True else "false"
+    assert actual == expected
