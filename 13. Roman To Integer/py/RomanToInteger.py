@@ -5,21 +5,16 @@ class Solution:
     def romanToInt(self, s: str) -> int:
         total = 0
         i = 0
-        while (True):
-            if i == len(s):
-                break
+        while i < len(s):
             c = s[i]
-            n = s[i+1] if (i < len(s) - 1) else ""
-            if (
-                ((c == "I") and (n == "V" or n == "X")) or
-                ((c == "X") and (n == "L" or n == "C")) or
-                ((c == "C") and (n == "D" or n == "M"))
-            ):
+            n = s[i + 1] if i < len(s) - 1 else ""
+            if (c == "I" and (n == "V" or n == "X")) or \
+               (c == "X" and (n == "L" or n == "C")) or \
+               (c == "C" and (n == "D" or n == "M")):
                 c += n
                 i += 1
             total += self.roman_value(c)
             i += 1
-
         return total
 
     def roman_value(self, s: str) -> int:
