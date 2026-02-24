@@ -32,4 +32,4 @@ class Solution:
             case "D": return 500
             case "CM": return 900
             case "M": return 1000
-            case _: raise ValueError("Unsupported value")
+            case _: raise ValueError(f"Unsupported value: {s}")

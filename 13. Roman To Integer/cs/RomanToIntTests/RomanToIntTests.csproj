@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
+    <PackageReference Include="xunit" Version="2.9.3" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="3.1.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RomanToInt\RomanToInt.csproj" />
+    <ProjectReference Include="..\..\..\Shared\Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\roman_to_int_test_cases.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Link>roman_to_int_test_cases.json</Link>
+    </None>
+    <None Include="..\..\roman_value_test_cases.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Link>roman_value_test_cases.json</Link>
+    </None>
+  </ItemGroup>
+
+</Project>
