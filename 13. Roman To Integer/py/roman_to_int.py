@@ -2,7 +2,7 @@
 # <https://leetcode.com/problems/roman-to-integer/description/>
 
 class Solution:
-    def romanToInt(self, s: str) -> int:
+    def roman_to_int(self, s: str) -> int:
         total = 0
         i = 0
         while i < len(s):
