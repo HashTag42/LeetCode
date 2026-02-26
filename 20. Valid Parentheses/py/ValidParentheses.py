@@ -4,18 +4,12 @@
 class Solution:
     def isValid(self, s: str) -> bool:
         stack = []
-        dirty = False
-        for i in s:
-            if i in ['(', '[', '{'] or len(stack) == 0:
-                stack.append(i)
-                dirty = True
-            elif len(stack) > 0:
-                sub = stack[-1] + i
-                if sub in ['()', '[]', '{}']:
-                    stack.pop()
-                else:
-                    return False
-        if len(stack) == 0 and dirty:
-            return True
-        else:
-            return False
+        pairs = {')': '(', ']': '[', '}': '{'}
+        for c in s:
+            if c in '([{':
+                stack.append(c)
+            elif not stack or stack[-1] != pairs[c]:
+                return False
+            else:
+                stack.pop()
+        return bool(s) and len(stack) == 0
