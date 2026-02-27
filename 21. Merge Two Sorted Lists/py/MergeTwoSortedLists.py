@@ -1,8 +1,6 @@
 # LeetCode challenge: 21. Merge Two Sorted Lists
 # https://leetcode.com/problems/merge-two-sorted-lists/description/
 
-from typing import Optional
-
 
 class ListNode:
     def __init__(self, val=0, next=None):
@@ -11,7 +9,7 @@ class ListNode:
 
 
 class Solution:
-    def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
+    def mergeTwoLists(self, list1: ListNode | None, list2: ListNode | None) -> ListNode | None:
         '''
         Time Complexity: O(n + m) where n and m are the lengths of the lists
         Space Complexity: O(1) - only using pointers, no extra data structures

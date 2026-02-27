@@ -1,4 +1,6 @@
-import unittest
+import json
+import pathlib
+import pytest
 from MergeTwoSortedLists import Solution, ListNode
 
 
@@ -16,6 +18,8 @@ def list_to_linked_list(lst):
 
 def linked_list_to_list(head):
     """Convert a linked list back to a Python list."""
+    if head is None:
+        return None
     result = []
     current = head
     while current:
@@ -24,94 +28,15 @@ def linked_list_to_list(head):
     return result
 
 
-class mergeTwoLists_Tests(unittest.TestCase):
-    def setUp(self):
-        self.solution = Solution()
+root = pathlib.Path(__file__).resolve().parents[1]
+test_cases_path = root / "test_cases.json"
+with open(test_cases_path) as f:
+    test_cases = json.load(f)
 
-    def test_mergeTwoLists_example_1(self):
-        list1 = list_to_linked_list([1, 2, 4])
-        list2 = list_to_linked_list([1, 3, 4])
-        result = self.solution.mergeTwoLists(list1, list2)
-        self.assertEqual(linked_list_to_list(result), [1, 1, 2, 3, 4, 4])
 
-    def test_mergeTwoLists_example_2(self):
-        result = self.solution.mergeTwoLists(None, None)
-        self.assertIsNone(result)
-
-    def test_mergeTwoLists_example_3(self):
-        list2 = list_to_linked_list([0])
-        result = self.solution.mergeTwoLists(None, list2)
-        self.assertEqual(linked_list_to_list(result), [0])
-
-    def test_mergeTwoLists_example_4(self):
-        list1 = list_to_linked_list([0])
-        result = self.solution.mergeTwoLists(list1, None)
-        self.assertEqual(linked_list_to_list(result), [0])
-
-    def test_mergeTwoLists_example_5(self):
-        result = self.solution.mergeTwoLists(None, None)
-        self.assertIsNone(result)
-
-    def test_mergeTwoLists_example_6(self):
-        list2 = list_to_linked_list([1])
-        result = self.solution.mergeTwoLists(None, list2)
-        self.assertEqual(linked_list_to_list(result), [1])
-
-    def test_mergeTwoLists_example_7(self):
-        list1 = list_to_linked_list([1])
-        result = self.solution.mergeTwoLists(list1, None)
-        self.assertEqual(linked_list_to_list(result), [1])
-
-    def test_mergeTwoLists_example_11(self):
-        list1 = list_to_linked_list([0])
-        list2 = list_to_linked_list([0])
-        result = self.solution.mergeTwoLists(list1, list2)
-        self.assertEqual(linked_list_to_list(result), [0, 0])
-
-    def test_mergeTwoLists_example_12(self):
-        list1 = list_to_linked_list([0])
-        list2 = list_to_linked_list([1])
-        result = self.solution.mergeTwoLists(list1, list2)
-        self.assertEqual(linked_list_to_list(result), [0, 1])
-
-    def test_mergeTwoLists_example_13(self):
-        list1 = list_to_linked_list([1])
-        list2 = list_to_linked_list([0])
-        result = self.solution.mergeTwoLists(list1, list2)
-        self.assertEqual(linked_list_to_list(result), [0, 1])
-
-    def test_mergeTwoLists_example_14(self):
-        list1 = list_to_linked_list([0])
-        list2 = list_to_linked_list([1, 2])
-        result = self.solution.mergeTwoLists(list1, list2)
-        self.assertEqual(linked_list_to_list(result), [0, 1, 2])
-
-    def test_mergeTwoLists_example_15(self):
-        list1 = list_to_linked_list([1])
-        list2 = list_to_linked_list([0, 2])
-        result = self.solution.mergeTwoLists(list1, list2)
-        self.assertEqual(linked_list_to_list(result), [0, 1, 2])
-
-    def test_mergeTwoLists_example_16(self):
-        list1 = list_to_linked_list([2])
-        list2 = list_to_linked_list([0, 1])
-        result = self.solution.mergeTwoLists(list1, list2)
-        self.assertEqual(linked_list_to_list(result), [0, 1, 2])
-
-    def test_mergeTwoLists_example_17(self):
-        list1 = list_to_linked_list([1, 2])
-        list2 = list_to_linked_list([0])
-        result = self.solution.mergeTwoLists(list1, list2)
-        self.assertEqual(linked_list_to_list(result), [0, 1, 2])
-
-    def test_mergeTwoLists_example_18(self):
-        list1 = list_to_linked_list([0, 2])
-        list2 = list_to_linked_list([1])
-        result = self.solution.mergeTwoLists(list1, list2)
-        self.assertEqual(linked_list_to_list(result), [0, 1, 2])
-
-    def test_mergeTwoLists_example_19(self):
-        list1 = list_to_linked_list([0, 1])
-        list2 = list_to_linked_list([2])
-        result = self.solution.mergeTwoLists(list1, list2)
-        self.assertEqual(linked_list_to_list(result), [0, 1, 2])
+@pytest.mark.parametrize('list1, list2, expected', test_cases)
+def test_MergeTwoSortedLists(list1, list2, expected):
+    l1 = list_to_linked_list(list1)
+    l2 = list_to_linked_list(list2)
+    result = Solution().mergeTwoLists(l1, l2)
+    assert linked_list_to_list(result) == expected
