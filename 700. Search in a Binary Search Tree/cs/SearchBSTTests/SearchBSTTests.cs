@@ -6,52 +6,52 @@ namespace LeetCode.SearchBST;
 
 public class SearchBSTTests
 {
-    public static TheoryData<int[], int, int[]> TestCases
+    public static TheoryData<int?[], int, int[]> TestCases
     {
         get
         {
-            var data = new TheoryData<int[], int, int[]>();
+            var data = new TheoryData<int?[], int, int[]>();
             var rows = TestDataLoader.LoadNestedArrayData("test_cases.json");
             foreach (var row in rows)
             {
                 var root = ExtractIntArray((JsonElement)row[0]);
                 var val = ((JsonElement)row[1]).GetInt32();
-                var expected = ExtractIntArray((JsonElement)row[2]);
+                var expected = ExtractIntArray((JsonElement)row[2]).Select(v => v!.Value).ToArray();
                 data.Add(root, val, expected);
             }
             return data;
         }
     }
 
-    private static int[] ExtractIntArray(JsonElement element)
+    private static int?[] ExtractIntArray(JsonElement element)
     {
-        var list = new List<int>();
+        var list = new List<int?>();
         foreach (var item in element.EnumerateArray())
         {
-            list.Add(item.GetInt32());
+            list.Add(item.ValueKind == JsonValueKind.Null ? null : item.GetInt32());
         }
         return [.. list];
     }
 
-    private static TreeNode? ListToTree(int[] vals)
+    private static TreeNode? ListToTree(int?[] vals)
     {
         if (vals.Length == 0) return null;
-        var root = new TreeNode(vals[0]);
+        var root = new TreeNode(vals[0]!.Value);
         var queue = new Queue<TreeNode>();
         queue.Enqueue(root);
         int i = 1;
         while (queue.Count > 0 && i < vals.Length)
         {
             var node = queue.Dequeue();
-            if (i < vals.Length)
+            if (i < vals.Length && vals[i] != null)
             {
-                node.left = new TreeNode(vals[i]);
+                node.left = new TreeNode(vals[i]!.Value);
                 queue.Enqueue(node.left);
             }
             i++;
-            if (i < vals.Length)
+            if (i < vals.Length && vals[i] != null)
             {
-                node.right = new TreeNode(vals[i]);
+                node.right = new TreeNode(vals[i]!.Value);
                 queue.Enqueue(node.right);
             }
             i++;
@@ -86,9 +86,15 @@ public class SearchBSTTests
         return result.Select(v => v!.Value).ToArray();
     }
 
+    [Fact]
+    public void TestCases_LoadsSuccessfully()
+    {
+        Assert.NotEmpty(TestCases);
+    }
+
     [Theory]
     [MemberData(nameof(TestCases))]
-    public void TestSearchBST(int[] root, int val, int[] expected)
+    public void TestSearchBST(int?[] root, int val, int[] expected)
     {
         var sol = new Solution();
         var tree = ListToTree(root);

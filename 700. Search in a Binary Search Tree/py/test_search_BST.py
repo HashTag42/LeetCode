@@ -54,3 +54,10 @@ def test_guess_number(root, val, expected):
     tree = list_to_tree(root)
     result = sol.searchBST(tree, val)
     assert tree_to_list(result) == expected
+
+
+def test_empty_tree():
+    sol = Solution()
+    tree = list_to_tree([])
+    result = sol.searchBST(tree, 5)
+    assert tree_to_list(result) == []
