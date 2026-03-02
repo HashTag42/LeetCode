@@ -6,6 +6,12 @@ namespace LeetCode.RomanToInt;
 
 public class RomanToIntTests
 {
+    [Fact]
+    public void TestCases_LoadsSuccessfully()
+    {
+        Assert.NotEmpty(TestCases);
+    }
+
     public static TheoryData<string, int> TestCases
     {
         get

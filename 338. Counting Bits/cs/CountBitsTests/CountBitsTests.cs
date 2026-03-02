@@ -6,6 +6,12 @@ namespace LeetCode.CountBits;
 
 public class CountBitsTests
 {
+    [Fact]
+    public void TestCases_LoadsSuccessfully()
+    {
+        Assert.NotEmpty(TestCases);
+    }
+
     public static TheoryData<int, int[]> TestCases
     {
         get

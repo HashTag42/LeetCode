@@ -6,6 +6,12 @@ namespace LeetCode.ValidParentheses;
 
 public class ValidParenthesesTests
 {
+    [Fact]
+    public void TestCases_LoadsSuccessfully()
+    {
+        Assert.NotEmpty(TestCases);
+    }
+
     public static TheoryData<string, bool> TestCases
     {
         get

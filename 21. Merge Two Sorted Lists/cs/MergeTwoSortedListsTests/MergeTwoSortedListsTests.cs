@@ -6,6 +6,12 @@ namespace LeetCode.MergeTwoSortedLists;
 
 public class MergeTwoSortedListsTests
 {
+    [Fact]
+    public void TestCases_LoadsSuccessfully()
+    {
+        Assert.NotEmpty(TestCases);
+    }
+
 	public static TheoryData<int[]?, int[]?, int[]?> TestCases
 	{
 		get

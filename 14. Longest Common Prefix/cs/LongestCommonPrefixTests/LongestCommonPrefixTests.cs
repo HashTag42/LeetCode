@@ -6,6 +6,12 @@ namespace LeetCode.LongestCommonPrefix;
 
 public class LongestCommonPrefixTests
 {
+    [Fact]
+    public void TestCases_LoadsSuccessfully()
+    {
+        Assert.NotEmpty(TestCases);
+    }
+
     public static TheoryData<string[], string> TestCases
     {
         get

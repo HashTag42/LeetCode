@@ -7,6 +7,12 @@ namespace LeetCode.AddTwoNumbers;
 
 public class AddTwoNumbersTests
 {
+    [Fact]
+    public void TestCases_LoadsSuccessfully()
+    {
+        Assert.NotEmpty(TestCases);
+    }
+
     public static TheoryData<int[]?, int[]?, int[]?> TestCases
     {
         get

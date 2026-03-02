@@ -6,6 +6,12 @@ namespace LeetCode.GuessGame;
 
 public class GuessGameTests
 {
+    [Fact]
+    public void TestCases_LoadsSuccessfully()
+    {
+        Assert.NotEmpty(TestCases);
+    }
+
     public static TheoryData<int, int> TestCases
     {
         get

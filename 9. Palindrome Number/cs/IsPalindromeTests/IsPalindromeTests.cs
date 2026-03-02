@@ -6,6 +6,12 @@ namespace LeetCode.IsPalindrome;
 
 public class IsPalindromTests
 {
+    [Fact]
+    public void TestCases_LoadsSuccessfully()
+    {
+        Assert.NotEmpty(TestCases);
+    }
+
     public static TheoryData<int, bool> TestCases
     {
         get
