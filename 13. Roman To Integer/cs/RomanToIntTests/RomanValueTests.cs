@@ -28,4 +28,10 @@ public class RomanValueTests
     {
         Assert.Equal(expected, Solution.RomanValue(s));
     }
+
+    [Fact]
+    public void TestRomanValue_InvalidInput_ThrowsArgumentException()
+    {
+        Assert.Throws<ArgumentException>(() => Solution.RomanValue("A"));
+    }
 }
