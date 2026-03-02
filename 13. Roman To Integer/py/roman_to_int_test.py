@@ -12,5 +12,9 @@ with open(test_cases_path) as f:
 
 @pytest.mark.parametrize('s, expected', test_cases)
 def test_roman_to_int(s, expected):
-    sol = Solution()
-    assert sol.roman_to_int(s) == expected
+    assert Solution().roman_to_int(s) == expected
+
+
+def test_roman_to_int_exception():
+    with pytest.raises(ValueError):
+        Solution().roman_to_int("INVALID")

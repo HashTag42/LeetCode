@@ -28,22 +28,22 @@ public class Solution
 
     public static int RomanValue(string s)
     {
-        switch(s)
+        return s switch
         {
-            case "I":   return 1;
-            case "IV":  return 4;
-            case "V":   return 5;
-            case "IX":  return 9;
-            case "X":   return 10;
-            case "XL":  return 40;
-            case "L":   return 50;
-            case "XC":  return 90;
-            case "C":   return 100;
-            case "CD":  return 400;
-            case "D":   return 500;
-            case "CM":  return 900;
-            case "M":   return 1000;
-            default: throw new ArgumentException($"Unsupported value: {s}", nameof(s));
-        }
+            "I" => 1,
+            "IV" => 4,
+            "V" => 5,
+            "IX" => 9,
+            "X" => 10,
+            "XL" => 40,
+            "L" => 50,
+            "XC" => 90,
+            "C" => 100,
+            "CD" => 400,
+            "D" => 500,
+            "CM" => 900,
+            "M" => 1000,
+            _ => throw new ArgumentException($"Unsupported value: {s}", nameof(s)),
+        };
     }
 }
