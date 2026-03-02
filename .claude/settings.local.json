@@ -2,7 +2,10 @@
   "permissions": {
     "allow": [
       "Bash(dotnet test:*)",
-      "Bash(dotnet sln add:*)"
+      "Bash(dotnet sln add:*)",
+      "Bash(while read f)",
+      "Bash(do dotnet add \"$f\" package coverlet.collector)",
+      "Bash(done)"
     ]
   }
 }
