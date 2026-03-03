@@ -1,13 +1,15 @@
-import unittest
+import json
+import pathlib
+import pytest
 from RemoveDuplicatesFromSortedArray import Solution
 
 
-class Solution_Tests(unittest.TestCase):
-    def setUp(self):
-        self.solution = Solution()
+root = pathlib.Path(__file__).resolve().parents[1]
+test_cases_path = root / "test_cases.json"
+with open(test_cases_path) as f:
+    test_cases = json.load(f)
 
-    def test_case_1(self):
-        self.assertEqual(self.solution.removeDuplicates([1, 1, 2]), 2)
 
-    def test_case_2(self):
-        self.assertEqual(self.solution.removeDuplicates([0, 0, 1, 1, 1, 2, 2, 3, 3, 4]), 5)
+@pytest.mark.parametrize('nums, expected', test_cases)
+def test_MergeTwoSortedLists(nums, expected):
+    assert Solution().removeDuplicates(nums) == expected
