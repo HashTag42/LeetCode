@@ -36,6 +36,8 @@ public class RemoveDuplicatesTests
     {
         if (list is null)
             return;
-        Assert.Equal(expected, Solution.RemoveDuplicates(list));
+
+        var solution = new Solution();
+        Assert.Equal(expected, solution.RemoveDuplicates(list));
     }
 }

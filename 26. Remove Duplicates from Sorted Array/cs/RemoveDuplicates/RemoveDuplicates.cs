@@ -5,7 +5,7 @@ namespace LeetCode.RemoveDuplicates;
 
 public class Solution
 {
-    public static int RemoveDuplicates(int[] nums)
+    public int RemoveDuplicates(int[] nums)
     {
         if (nums.Length == 0)
         {
