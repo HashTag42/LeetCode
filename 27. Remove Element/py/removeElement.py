@@ -5,12 +5,9 @@
 class Solution:
     def removeElement(self, nums: list[int], val: int) -> int:
         index = 0
-        while True:
-            if index >= len(nums):
-                break
+        while index < len(nums):
             if nums[index] == val:
                 del nums[index]
             else:
                 index += 1
-        k = len(nums) - nums.count(val)
-        return k
+        return len(nums)

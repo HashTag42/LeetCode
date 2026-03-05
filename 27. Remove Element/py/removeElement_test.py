@@ -11,5 +11,5 @@ with open(test_cases_path) as f:
 
 
 @pytest.mark.parametrize('nums, val, expected', test_cases)
-def test_MergeTwoSortedLists(nums, val, expected):
+def test_removeElement(nums, val, expected):
     assert Solution().removeElement(nums, val) == expected
