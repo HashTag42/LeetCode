@@ -1,16 +1,15 @@
-import unittest
+import json
+import pathlib
+import pytest
 from removeElement import Solution
 
 
-class Solution_removeElement_Tests(unittest.TestCase):
-    def setUp(self):
-        self.solution = Solution()
+root = pathlib.Path(__file__).resolve().parents[1]
+test_cases_path = root / "test_cases.json"
+with open(test_cases_path) as f:
+    test_cases = json.load(f)
 
-    def test_Example_1(self):
-        self.assertEqual(self.solution.removeElement([3, 2, 2, 3], 3), (2, [2, 2]))
 
-    def test_Example_2(self):
-        self.assertEqual(self.solution.removeElement([0, 1, 2, 2, 3, 0, 4, 2], 2), (5, [0, 1, 3, 0, 4]))
-
-    def test_Example_3(self):
-        self.assertEqual(self.solution.removeElement([2, 2, 3], 2), (1, [3]))
+@pytest.mark.parametrize('nums, val, expected', test_cases)
+def test_MergeTwoSortedLists(nums, val, expected):
+    assert Solution().removeElement(nums, val) == expected
