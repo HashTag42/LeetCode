@@ -1,4 +1,12 @@
 [
     ["sadbutsad", "sad", 0],
-    ["leetcode", "leeto", -1]
+    ["leetcode", "leeto", -1],
+    ["hello", "ll", 2],
+    ["aaa", "aaa", 0],
+    ["aaa", "aaaa", -1],
+    ["a", "a", 0],
+    ["a", "b", -1],
+    ["mississippi", "issip", 4],
+    ["abcdef", "f", 5],
+    ["abcdef", "abcdef", 0]
 ]
