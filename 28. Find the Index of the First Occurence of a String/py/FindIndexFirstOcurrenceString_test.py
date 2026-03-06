@@ -1,13 +1,15 @@
-import unittest
+import json
+import pathlib
+import pytest
 from FindIndexFirstOcurrenceString import Solution
 
 
-class Solution_Tests(unittest.TestCase):
-    def setUp(self):
-        self.solution = Solution()
+root = pathlib.Path(__file__).resolve().parents[1]
+test_cases_path = root / "test_cases.json"
+with open(test_cases_path) as f:
+    test_cases = json.load(f)
 
-    def test_success(self):
-        self.assertEqual(self.solution.strStr("sadbutsad", "sad"), 0)
 
-    def test_failure(self):
-        self.assertEqual(self.solution.strStr("leetcode", "leeto"), -1)
+@pytest.mark.parametrize('haystack, needle, expected', test_cases)
+def test_removeElement(haystack, needle, expected):
+    assert Solution().strStr(haystack, needle) == expected
