@@ -33,6 +33,6 @@ public class MyPowTests
     [MemberData(nameof(TestCases))]
     public void TestMyPow(double x, int n, double expected)
     {
-        Assert.Equal(expected, Solution.MyPow(x, n), 5);
+        Assert.Equal(expected, new Solution().MyPow(x, n), 5);
     }
 }

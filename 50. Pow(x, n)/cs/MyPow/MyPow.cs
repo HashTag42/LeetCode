@@ -5,7 +5,7 @@ namespace LeetCode.MyPow;
 
 public class Solution
 {
-    public static double MyPow(double x, int n)
+    public double MyPow(double x, int n)
     {
         if (n == 0)
             return 1;
