@@ -1,14 +1,20 @@
-# LeetCode challenge: 50. Pow(x, n)
+# LeetCode problem: 50. Pow(x, n)
 # <https://leetcode.com/problems/powx-n/description/>
 
 class Solution:
     def myPow(self, x: float, n: int) -> float:
         """
-        Recursive implementation:
-        Time Complexity: O(n)
+        Algorithm: Binary Exponentiation
+        Time Complexity: O(log n)
         """
         if n == 0:
             return 1
         if n < 0:
-            return 1 / self.myPow(x, -n)
-        return x * self.myPow(x, n - 1)
+            x, n = 1 / x, -n
+        result = 1
+        while n:
+            if n % 2 == 1:
+                result *= x
+            x *= x
+            n //= 2
+        return result
