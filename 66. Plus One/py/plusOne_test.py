@@ -1,16 +1,15 @@
-import unittest
+import json
+import pathlib
+import pytest
 from plusOne import Solution
 
 
-class Solution_plusOne_Tests(unittest.TestCase):
-    def setUp(self):
-        self.solution = Solution()
+root = pathlib.Path(__file__).resolve().parents[1]
+test_cases_path = root / "test_cases.json"
+with open(test_cases_path) as f:
+    test_cases = json.load(f)
 
-    def test_Case_1(self):
-        self.assertEqual(self.solution.plusOne([1, 2, 3]), [1, 2, 4])
 
-    def test_Case_2(self):
-        self.assertEqual(self.solution.plusOne([4, 3, 2, 1]), [4, 3, 2, 2])
-
-    def test_Case_3(self):
-        self.assertEqual(self.solution.plusOne([9]), [1, 0])
+@pytest.mark.parametrize('digits, expected', test_cases)
+def test_plusOne(digits, expected):
+    assert Solution().plusOne(digits) == expected
