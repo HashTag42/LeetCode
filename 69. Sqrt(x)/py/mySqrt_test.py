@@ -1,16 +1,14 @@
-import unittest
+import json
+import pathlib
+import pytest
 from mySqrt import Solution
 
+root = pathlib.Path(__file__).resolve().parents[1]
+test_cases_path = root / "test_cases.json"
+with open(test_cases_path) as f:
+    test_cases = json.load(f)
 
-class Solution_mySqrt_Tests(unittest.TestCase):
-    def setUp(self):
-        self.solution = Solution()
 
-    def test_1(self):
-        self.assertEqual(self.solution.mySqrt(4), 2)
-
-    def test_2(self):
-        self.assertEqual(self.solution.mySqrt(8), 2)
-
-    def test_3(self):
-        self.assertEqual(self.solution.mySqrt(2147395599), 46339)
+@pytest.mark.parametrize('x, expected', test_cases)
+def test_mySqrt(x, expected):
+    assert Solution().mySqrt(x) == expected
