@@ -9,6 +9,6 @@ with open(test_cases_path) as f:
     test_cases = json.load(f)
 
 
-@pytest.mark.parametrize('x, expected', test_cases)
-def test_climbStairs(x, expected):
-    assert Solution().climbStairs(x) == expected
+@pytest.mark.parametrize('n, expected', test_cases)
+def test_climbStairs(n, expected):
+    assert Solution().climbStairs(n) == expected
