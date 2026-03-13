@@ -1,23 +1,14 @@
-import unittest
+import json
+import pathlib
+import pytest
 from climbStairs import Solution
 
+root = pathlib.Path(__file__).resolve().parents[1]
+test_cases_path = root / "test_cases.json"
+with open(test_cases_path) as f:
+    test_cases = json.load(f)
 
-class Solution_climbStairs_Tests(unittest.TestCase):
-    def setUp(self):
-        self.solution = Solution()
 
-    def test_case_1(self):
-        self.assertEqual(self.solution.climbStairs(1), 1)
-
-    def test_case_2(self):
-        self.assertEqual(self.solution.climbStairs(2), 2)
-
-    def test_case_3(self):
-        self.assertEqual(self.solution.climbStairs(3), 3)
-
-    def test_case_5(self):
-        self.assertEqual(self.solution.climbStairs(5), 8)
-
-    def test_case_negative(self):
-        with self.assertRaises(ValueError):
-            self.solution.climbStairs(-1)
+@pytest.mark.parametrize('x, expected', test_cases)
+def test_climbStairs(x, expected):
+    assert Solution().climbStairs(x) == expected
