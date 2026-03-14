@@ -1,27 +1,14 @@
-import unittest
+import json
+import pathlib
+import pytest
 from mergeSortedArray import Solution
 
+root = pathlib.Path(__file__).resolve().parents[1]
+test_cases_path = root / "test_cases.json"
+with open(test_cases_path) as f:
+    test_cases = json.load(f)
 
-class merge_Tests(unittest.TestCase):
-    def setUp(self):
-        self.solution = Solution()
 
-    def test1(self):
-        nums1 = [1, 2, 3, 0, 0, 0]
-        self.solution.mergeSortedArray(nums1, m=3, nums2=[2, 5, 6], n=3)
-        self.assertEqual(nums1, [1, 2, 2, 3, 5, 6])
-
-    def test2(self):
-        nums1 = [1]
-        self.solution.mergeSortedArray(nums1, m=1, nums2=[], n=0)
-        self.assertEqual(nums1, [1])
-
-    def test3(self):
-        nums1 = [0]
-        self.solution.mergeSortedArray(nums1, m=0, nums2=[1], n=1)
-        self.assertEqual(nums1, [1])
-
-    def test4(self):
-        nums1 = [1, 2, 4, 5, 6, 0]
-        self.solution.mergeSortedArray(nums1, m=5, nums2=[3], n=1)
-        self.assertEqual(nums1, [1, 2, 3, 4, 5, 6])
+@pytest.mark.parametrize('nums1, m, nums2, n, expected', test_cases)
+def test_mergeSortedArray(nums1, m, nums2, n, expected):
+    assert Solution().mergeSortedArray(nums1, m, nums2, n) == expected
