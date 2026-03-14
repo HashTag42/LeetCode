@@ -1,34 +1,37 @@
-import unittest
+import json
+import pathlib
+import pytest
+from collections import deque
 from inorderTraversal import TreeNode, Solution
 
+root = pathlib.Path(__file__).resolve().parents[1]
+test_cases_path = root / "test_cases.json"
 
-class Solution_inorderTraversal_Tests(unittest.TestCase):
-    def setUp(self):
-        self.solution = Solution()
+with open(test_cases_path) as f:
+    test_cases = json.load(f)
 
-    def test_inorderTraversal_TestCase_1(self):
-        bt = TreeNode(1)
-        bt.right = TreeNode(2)
-        bt.right.left = TreeNode(3)
-        self.assertEqual(self.solution.inorderTraversal(bt), [1, 3, 2])
 
-    def test_inorderTraversal_TestCase_2(self):
-        bt = TreeNode(1)
-        bt.left = TreeNode(2)
-        bt.left.left = TreeNode(4)
-        bt.left.right = TreeNode(5)
-        bt.left.right.left = TreeNode(6)
-        bt.left.right.right = TreeNode(7)
-        bt.right = TreeNode(3)
-        bt.right.right = TreeNode(8)
-        bt.right.right.left = TreeNode(9)
-        actual = self.solution.inorderTraversal(bt)
-        expected = [4, 2, 6, 5, 7, 1, 3, 9, 8]
-        self.assertEqual(actual, expected)
+def build_tree(values: list) -> TreeNode | None:
+    if not values:
+        return None
+    root_node = TreeNode(values[0])
+    queue = deque([root_node])
+    i = 1
+    while queue and i < len(values):
+        node = queue.popleft()
+        if i < len(values) and values[i] is not None:
+            node.left = TreeNode(values[i])
+            queue.append(node.left)
+        i += 1
+        if i < len(values) and values[i] is not None:
+            node.right = TreeNode(values[i])
+            queue.append(node.right)
+        i += 1
+    return root_node
 
-    def test_inorderTraversal_TestCase_3(self):
-        self.assertEqual(self.solution.inorderTraversal(None), [])
 
-    def test_inorderTraversal_TestCase_4(self):
-        bt = TreeNode(1)
-        self.assertEqual(self.solution.inorderTraversal(bt), [1])
+@pytest.mark.parametrize("tree_values, expected", test_cases)
+def test_inorderTraversal(tree_values, expected):
+    sol = Solution()
+    tree = build_tree(tree_values) if tree_values is not None else None
+    assert sol.inorderTraversal(tree) == expected
