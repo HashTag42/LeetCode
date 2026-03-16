@@ -2,6 +2,7 @@
 LeetCode challenge #102 Binary Tree Level Order Traversal
 https://leetcode.com/problems/binary-tree-level-order-traversal/description/
 '''
+from collections import deque
 from typing import Optional, List
 
 
@@ -20,8 +21,6 @@ class Solution:
             return levels
 
         def helper(node: TreeNode, level: int) -> None:
-            assert isinstance(node, TreeNode)
-
             # start the current level
             if len(levels) == level:
                 levels.append([])
@@ -36,4 +35,25 @@ class Solution:
                 helper(node.right, level + 1)
 
         helper(root, 0)
+        return levels
+
+
+class SolutionBFS:
+    def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
+        levels = []
+        if not root:
+            return levels
+
+        queue = deque([root])
+        while queue:
+            level = []
+            for _ in range(len(queue)):
+                node = queue.popleft()
+                level.append(node.val)
+                if node.left:
+                    queue.append(node.left)
+                if node.right:
+                    queue.append(node.right)
+            levels.append(level)
+
         return levels
