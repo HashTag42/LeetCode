@@ -28,7 +28,7 @@ def build_tree(values: Optional[list]) -> Optional[TreeNode]:
 
 
 def load_cases():
-    path = os.path.join(os.path.dirname(__file__), "test_cases.json")
+    path = os.path.join(os.path.dirname(__file__), "..", "test_cases.json")
     with open(path) as f:
         return json.load(f)
 
@@ -38,5 +38,5 @@ CASES = load_cases()
 
 @pytest.mark.parametrize("case", CASES)
 def test__Solution__levelOrder(case):
-    root = build_tree(case["tree"])
-    assert Solution().levelOrder(root) == case["expected"]
+    root = build_tree(case[0])
+    assert Solution().levelOrder(root) == case[1]
