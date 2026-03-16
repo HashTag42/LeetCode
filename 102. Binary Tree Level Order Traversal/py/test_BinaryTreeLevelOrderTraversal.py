@@ -1,29 +1,42 @@
+import json
+import os
+from collections import deque
+from typing import Optional
+
+import pytest
+
 from BinaryTreeLevelOrderTraversal import Solution, TreeNode
 
 
-def test__Solution__levelOrder__case0():
-    solution = Solution()
-    root = None
-    assert solution.levelOrder(root) == []
+def build_tree(values: Optional[list]) -> Optional[TreeNode]:
+    if not values:
+        return None
+    root = TreeNode(values[0])
+    queue = deque([root])
+    i = 1
+    while queue and i < len(values):
+        node = queue.popleft()
+        if i < len(values) and values[i] is not None:
+            node.left = TreeNode(values[i])
+            queue.append(node.left)
+        i += 1
+        if i < len(values) and values[i] is not None:
+            node.right = TreeNode(values[i])
+            queue.append(node.right)
+        i += 1
+    return root
 
 
-def test__Solution__levelOrder__case1():
-    solution = Solution()
-    root = TreeNode()
-    assert solution.levelOrder(root) == [[0]]
+def load_cases():
+    path = os.path.join(os.path.dirname(__file__), "test_cases.json")
+    with open(path) as f:
+        return json.load(f)
 
 
-def test__Solution__levelOrder__case2():
-    solution = Solution()
-    root = TreeNode(1)
-    assert solution.levelOrder(root) == [[1]]
+CASES = load_cases()
 
 
-def test__Solution__levelOrder__case3():
-    solution = Solution()
-    root = TreeNode(3)
-    root.left = TreeNode(9)
-    root.right = TreeNode(20)
-    root.right.left = TreeNode(15)
-    root.right.right = TreeNode(7)
-    assert solution.levelOrder(root) == [[3], [9, 20], [15, 7]]
+@pytest.mark.parametrize("case", CASES)
+def test__Solution__levelOrder(case):
+    root = build_tree(case["tree"])
+    assert Solution().levelOrder(root) == case["expected"]
