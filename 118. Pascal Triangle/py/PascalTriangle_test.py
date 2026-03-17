@@ -1,22 +1,20 @@
-import unittest
+import json
+import os
+
+import pytest
 from PascalTriangle import Solution
 
+_TEST_CASES_PATH = os.path.join(os.path.dirname(__file__), "..", "test_cases.json")
 
-class Generate_Tests(unittest.TestCase):
-    def setUp(self):
-        self.solution = Solution()
+with open(_TEST_CASES_PATH) as f:
+    _TEST_CASES = json.load(f)
 
-    def test01(self):
-        self.assertEqual(self.solution.generate(0), [])
 
-    def test02(self):
-        self.assertEqual(self.solution.generate(1), [[1]])
+@pytest.fixture
+def solution():
+    return Solution()
 
-    def test03(self):
-        self.assertEqual(self.solution.generate(2), [[1], [1, 1]])
 
-    def test04(self):
-        self.assertEqual(self.solution.generate(3), [[1], [1, 1], [1, 2, 1]])
-
-    def test05(self):
-        self.assertEqual(self.solution.generate(4), [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1]])
+@pytest.mark.parametrize("case", _TEST_CASES, ids=[str(c["numRows"]) for c in _TEST_CASES])
+def test_generate(solution, case):
+    assert solution.generate(case["numRows"]) == case["expected"]
