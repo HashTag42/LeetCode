@@ -14,6 +14,6 @@ def solution():
     return Solution()
 
 
-@pytest.mark.parametrize("case", _TEST_CASES, ids=[str(c["numRows"]) for c in _TEST_CASES])
-def test_generate(solution, case):
-    assert solution.generate(case["numRows"]) == case["expected"]
+@pytest.mark.parametrize("numRows,expected", _TEST_CASES, ids=[str(c[0]) for c in _TEST_CASES])
+def test_generate(solution, numRows, expected):
+    assert solution.generate(numRows) == expected
