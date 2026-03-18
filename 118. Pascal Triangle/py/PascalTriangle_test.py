@@ -1,6 +1,5 @@
 import json
 import os
-
 import pytest
 from PascalTriangle import Solution
 
