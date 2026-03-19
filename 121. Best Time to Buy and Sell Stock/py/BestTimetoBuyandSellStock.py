@@ -3,7 +3,12 @@
 
 class Solution:
     def maxProfit(self, prices: list[int]) -> int:
-        min_price = prices[0] if prices else 0
+        '''
+        Constraints:
+            1 <= prices.length <= 105
+            0 <= prices[i] <= 104
+        '''
+        min_price = prices[0]
         max_profit = 0
         for price in prices:
             if price < min_price:
