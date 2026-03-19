@@ -1,23 +1,13 @@
-# LeetCode challenge: 121. Best Time to Buy and Sell Stock
-# <https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/>
-
-from typing import List
-from math import inf
-
+# LeetCode problem: 121. Best Time to Buy and Sell Stock
+# https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/
 
 class Solution:
-    def maxProfit(self, prices: List[int]) -> int:
-        min_price = inf
-        max_price = -inf
-        cur_profit = -inf
-        max_profit = -inf
-        for i in range(len(prices)):
-            price = prices[i]
+    def maxProfit(self, prices: list[int]) -> int:
+        min_price = prices[0] if prices else 0
+        max_profit = 0
+        for price in prices:
             if price < min_price:
                 min_price = price
-                max_price = -inf
-            if price > max_price:
-                max_price = price
-                cur_profit = max_price - min_price
-                max_profit = max(cur_profit, max_profit)
+            else:
+                max_profit = max(max_profit, price - min_price)
         return max_profit
