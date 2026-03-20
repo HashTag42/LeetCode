@@ -4,7 +4,7 @@ using Xunit;
 
 namespace LeetCode.IsPalindrome;
 
-public class IsPalindromTests
+public class IsPalindromeTests
 {
     [Fact]
     public void TestCases_LoadsSuccessfully()
