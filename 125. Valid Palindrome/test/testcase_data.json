@@ -1,0 +1,11 @@
+[
+    ["", true],
+    [" ", true],
+    ["a", true],
+    ["A man, a plan, a canal: Panama", true],
+    ["race a car", false],
+    ["0P", false],
+    ["abba", true],
+    ["abcba", true],
+    ["abcabc", false]
+]
