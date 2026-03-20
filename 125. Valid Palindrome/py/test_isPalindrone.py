@@ -25,9 +25,3 @@ def test__isPalindrome1__(s, expected):
 def test__isPalindrome2__(s, expected):
     solution = Solution()
     assert solution.isPalindrome2(s) == expected
-
-
-@pytest.mark.parametrize("s, expected", cases)
-def test__isPalindrome3__(s, expected):
-    solution = Solution()
-    assert solution.isPalindrome3(s) == expected

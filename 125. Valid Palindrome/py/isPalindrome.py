@@ -19,22 +19,7 @@ class Solution:
         """
         Returns true if a string is a palindrome. False otherwise.
         Only considers alphanumeric characters in the string. Character case is ignored.
-        Two-pointer implementation.
-        Time Complexity: O(n)
-        Space Complexity: O(n)
-        """
-        cleaned = ''.join(c.lower() for c in s if c.isalnum())
-        for i in range(len(cleaned) // 2):
-            if cleaned[i] != cleaned[len(cleaned) - i - 1]:
-                return False
-        return True
-
-    def isPalindrome3(self, s: str) -> bool:
-        """
-        Returns true if a string is a palindrome. False otherwise.
-        Only considers alphanumeric characters in the string. Character case is ignored.
-        Two-pointer implementation.
-        Does not make a copy of the source string.
+        Two-pointer implementation. Does not make a copy of the source string.
         Time Complexity: O(n)
         Space Complexity: O(1)
         """
