@@ -9,6 +9,10 @@ with open(test_cases_path) as file:
     test_cases = json.load(file)
 
 
-@pytest.mark.parametrize("numbers,target,expected", test_cases)
+@pytest.mark.parametrize("numbers, target, expected", test_cases)
 def test__Solution__twoSum2(numbers, target, expected):
     assert Solution().twoSum2(numbers, target) == expected
+
+
+def test__Solution__twoSum2__while_condition_false():
+    assert Solution().twoSum2([1], 1) is None
