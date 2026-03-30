@@ -1,18 +1,14 @@
-from majorityElement import Solution
+import json
+import pathlib
 import pytest
+from majorityElement import Solution
+
+root = pathlib.Path(__file__).resolve().parents[1]
+test_cases_path = root / "test_cases.json"
+with open(test_cases_path) as file:
+    test_cases = json.load(file)
 
 
-cases = [
-    # (nums, expected)
-    ([3, 2, 3], 3),
-    ([2, 2, 1, 1, 1, 2, 2], 2),
-    ([6, 5, 5], 5),
-    ([-2, -1, -2], -2),
-    ([-1, 0, 0, 1], 0),
-]
-
-
-@pytest.mark.parametrize("nums, expected", cases)
+@pytest.mark.parametrize("nums, expected", test_cases)
 def test__majorityElement__(nums, expected):
-    solution = Solution()
-    assert expected == solution.majorityElement(nums)
+    assert Solution().majorityElement(nums) is expected
