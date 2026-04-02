@@ -16,7 +16,4 @@ class Solution:
             results.add(n)
 
     def squareDigits(self, n: int) -> int:
-        total = 0
-        for c in str(n):
-            total += pow(int(c), 2)
-        return total
+        return sum(int(c) ** 2 for c in str(n))
