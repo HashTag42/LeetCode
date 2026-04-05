@@ -1,4 +1,15 @@
 [
+    [1, true],
+    [7, true],
+    [10, true],
+    [13, true],
     [19, true],
-    [2, false]
+    [23, true],
+    [100, true],
+    [2, false],
+    [3, false],
+    [4, false],
+    [11, false],
+    [20, false],
+    [116, false]
 ]
