@@ -19,9 +19,10 @@ def test__reverseList(nodes, expected):
         for i in range(1, len(nodes)):
             current.next = ListNode(nodes[i])
             current = current.next
+
     out_head = Solution().reverseList(in_head)
 
-    # Conver resulting linked list to a list
+    # Convert resulting linked list to a list
     out_list = list()
     current = out_head
     while current:

@@ -13,16 +13,16 @@ namespace LeetCode.ReverseList;
 
 public class Solution
 {
-    public ListNode? ReverseList(ListNode head)
+    public ListNode? ReverseList(ListNode? head)
     {
         ListNode? prev = null;
         ListNode? current = head;
         while (current != null)
         {
-            ListNode? next_node = current.next;
+            ListNode? nextNode = current.next;
             current.next = prev;
             prev = current;
-            current = next_node;
+            current = nextNode;
         }
         return prev;
     }
