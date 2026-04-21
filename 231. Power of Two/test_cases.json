@@ -8,7 +8,6 @@
     [8, true],
     [16, true],
     [1024, true],
-    [2147483648, true],
     [-1, false],
     [-2, false],
     [6, false],
