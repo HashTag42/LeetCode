@@ -1,17 +1,13 @@
-from isPowerOfTwo import Solution
+import json
+import pathlib
 import pytest
+from isPowerOfTwo import Solution
+
+test_cases_path = pathlib.Path(__file__).resolve().parents[1] / "test_cases.json"
+with open(test_cases_path) as file:
+    test_cases = json.load(file)
 
 
-cases = [
-    # n, expected
-    (0, False),
-    (1, True),
-    (3, False),
-    (8, True),
-    (16, True),
-]
-
-
-@pytest.mark.parametrize("n, expected", cases)
+@pytest.mark.parametrize("n, expected", test_cases)
 def test_Solution_isPowerOfTwo(n, expected):
     assert Solution().isPowerOfTwo(n) == expected
