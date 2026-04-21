@@ -1,7 +1,17 @@
 [
     [0, false],
     [1, true],
+    [2, true],
     [3, false],
+    [4, true],
+    [5, false],
     [8, true],
-    [16, true]
+    [16, true],
+    [1024, true],
+    [2147483648, true],
+    [-1, false],
+    [-2, false],
+    [6, false],
+    [1073741823, false],
+    [1073741824, true]
 ]
