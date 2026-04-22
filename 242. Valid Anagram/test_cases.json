@@ -1,4 +1,18 @@
 [
     ["anagram", "nagaram", true],
-    ["rat", "car", false]
+    ["rat", "car", false],
+    ["a", "a", true],
+    ["a", "b", false],
+    ["ab", "a", false],
+    ["", "", true],
+    ["aabbcc", "abcabc", true],
+    ["aabbcc", "aabbcd", false],
+    ["aaaa", "aaaa", true],
+    ["listen", "silent", true],
+    ["hello", "world", false],
+    ["abc", "cba", true],
+    ["abcdefghijklmnop", "ponmlkjihgfedcba", true],
+    ["aab", "bba", false],
+    ["zzz", "zzz", true],
+    ["zzz", "zzy", false]
 ]
