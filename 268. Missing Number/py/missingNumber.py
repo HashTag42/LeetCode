@@ -11,7 +11,7 @@ class Solution:
         """
         Brute force approach
         Time complexity = O(n^2)
-        Storage complexity = O(1)
+        Space complexity = O(1)
         """
         # LeetCode guarantees nums is a valid list with at least one element
         n = len(nums) + 1
@@ -24,7 +24,7 @@ class Solution:
         """
         Optimal approach
         Time complexity = O(n) to obtain sum_of_elements
-        Storage complexity = O(1)
+        Space complexity = O(1)
         """
         # LeetCode guarantees nums is a valid list with at least one element
         n = len(nums)
