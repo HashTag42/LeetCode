@@ -13,3 +13,14 @@ def test__moveZeroes__(nums, expected):
     solution = Solution()
     solution.moveZeroes(nums)
     assert nums == expected
+
+
+def test__moveZeroes__mutates_in_place():
+    nums = [0, 1, 0, 3, 12]
+    nums_id_before = id(nums)
+
+    solution = Solution()
+    solution.moveZeroes(nums)
+
+    assert id(nums) == nums_id_before
+    assert nums == [1, 3, 12, 0, 0]
